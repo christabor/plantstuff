@@ -13,7 +13,7 @@ from pprint import pprint as ppr
 
 from pyquery import PyQuery as Pq
 
-from core import cache_html, cache_json
+from plantstuff.core.cache import cache_html, cache_json
 
 GARDEN_ORG_URL = 'https://garden.org/plants/view/{plant_info}/'
 USDA_URL = 'https://plants.usda.gov/core/profile?symbol={symbol}'
@@ -30,6 +30,7 @@ def get(url):
     data = requests.get(url).content
     dom = Pq(data)
     return data, dom
+
 
 LETTERS = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'.split()
 
@@ -193,5 +194,3 @@ if __name__ == '__main__':
     # get_companion_plant_monrovia()
     # make_companion_plant_graph()
     get_all_plants_from_all_letters_all_pages_n_monrovia()
-
-

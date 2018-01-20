@@ -6,9 +6,9 @@ from pprint import pprint as ppr
 from pandas import Series
 from tinydb import Query, TinyDB
 
-import utils
+from plantstuff import utils
 
-db = TinyDB('monrovia_plant_db.json')
+db = TinyDB('data/monrovia/monrovia_plant_db.json')
 
 
 def backfill():
@@ -16,6 +16,7 @@ def backfill():
     for item in raw:
         print('inserting,', item)
         db.insert(item)
+
 
 # res = db.all()
 # print(res)
