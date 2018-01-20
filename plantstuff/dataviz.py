@@ -6,7 +6,9 @@ import pygraphviz as pgv
 
 from bokeh.plotting import figure, output_file, show
 
-from utils import get_companion_plant_monrovia, load_monrovia_data
+from plantstuff.sources.monrovia import (
+    get_companion_plant_monrovia, load_monrovia_data,
+)
 
 # data = load_monrovia_data()
 # names = [d['name'] for d in data]

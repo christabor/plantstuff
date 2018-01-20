@@ -1,38 +1,15 @@
-"""Scraping utils."""
+from pprint import pprint as ppr
 
 import json
 import os
-import time
 
 from collections import defaultdict
 
-# import pandas as pd
-import requests
-
-from pprint import pprint as ppr
-
-from pyquery import PyQuery as Pq
-
-from plantstuff.core.cache import cache_html, cache_json
-
-GARDEN_ORG_URL = 'https://garden.org/plants/view/{plant_info}/'
-USDA_URL = 'https://plants.usda.gov/core/profile?symbol={symbol}'
-UCONN_URL = 'http://hort.uconn.edu/search.php'
-MONROVIA_URL = 'http://www.monrovia.com/plant-catalog/plants/{plant_info}'
-PLANTS_DB_URL = 'https://plantsdb.xyz/search'
-PERENNIALS_URL = 'http://www.perennials.com/plants/{plant}.html'
-DAVES_URL = 'https://davesgarden.com/guides/pf/go/{plant_id}/'
-
-
-@cache_html
-def get(url):
-    """Get html and dom object."""
-    data = requests.get(url).content
-    dom = Pq(data)
-    return data, dom
-
+from plantstuff.core.cache import cache_json
+from plantstuff.core.utils import get_dom
 
 LETTERS = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'.split()
+MONROVIA_URL = 'http://www.monrovia.com/plant-catalog/plants/{plant_info}'
 
 
 def get_letter_search_results_monrovia(letter, start):
@@ -42,7 +19,7 @@ def get_letter_search_results_monrovia(letter, start):
            'common_name={letter}&'
            'start_page={start}&botanical_name=&'
            'sort_by=common_name&cold_zone={zone}')
-    return get(url.format(start=start, letter=letter, zone=8))
+    return get_dom(url.format(start=start, letter=letter, zone=8))
 
 
 def get_all_letter_search_results_monrovia():
@@ -87,7 +64,7 @@ def get_plants_grid_all_letters_results_monrovia():
 
 # def get_info(info):
 #     """Get plant info."""
-#     data, dom = get(GARDEN_ORG_URL.format(plant_info=info))
+#     data, dom = get_dom(GARDEN_ORG_URL.format(plant_info=info))
 #     tables = dom.find('#ngabody').find('table')
 #     dfs = pd.read_html(str(tables))
 #     for table in dfs:
@@ -100,7 +77,7 @@ def get_plants_grid_all_letters_results_monrovia():
 def get_monrovia_info(info):
     """Get plant info."""
     url = MONROVIA_URL.format(plant_info=info)
-    raw_data, dom = get(url)
+    raw_data, dom = get_dom(url)
     details = dom.find('#Detail').find('.attribute')
     overview = dom.find('#Overview').find('.attribute')
     data = {}
@@ -165,7 +142,7 @@ def get_companion_plant_monrovia():
 
 # def get_usda_info(symbol):
 #     """Get plant info."""
-#     data = get(USDA_URL.format(symbol=symbol))
+#     data = get_dom(USDA_URL.format(symbol=symbol))
 #     dom = Pq(data)
 
 
