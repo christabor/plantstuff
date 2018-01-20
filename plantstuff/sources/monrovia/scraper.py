@@ -1,15 +1,26 @@
+"""Monrovia specific data scraping."""
+
 from pprint import pprint as ppr
 
 import json
 import os
-
 from collections import defaultdict
 
-from plantstuff.core.cache import cache_json
-from plantstuff.core.utils import get_dom
+from pyquery import PyQuery as Pq
+import requests
+
+from plantstuff.core.cache import cache_json, cache_html
 
 LETTERS = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'.split()
 MONROVIA_URL = 'http://www.monrovia.com/plant-catalog/plants/{plant_info}'
+
+
+@cache_html(directory='../../data/monrovia')
+def get_dom(url):
+    """Get html and dom object."""
+    data = requests.get(url).content
+    dom = Pq(data)
+    return data, dom
 
 
 def get_letter_search_results_monrovia(letter, start):

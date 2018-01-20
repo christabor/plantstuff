@@ -8,7 +8,7 @@ from tinydb import Query, TinyDB
 
 from plantstuff import utils
 
-db = TinyDB('monrovia_plant_db.json')
+db = TinyDB('../../data/monrovia/monrovia_plant_db.json')
 
 
 def backfill():
