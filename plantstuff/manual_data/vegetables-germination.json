@@ -1,0 +1,21 @@
+{
+    "source": "https://extension.psu.edu/seed-and-seedling-biology",
+    "data": [
+        {"name": "beet", "min_f": 40, "optimal_range_f": "50-85", "optimal_f": 85, "max_f": 85},
+        {"name": "cabbage", "min_f": 40, "optimal_range_f": "45-95", "optimal_f": 85, "max_f": 100},
+        {"name": "cauliflower", "min_f": 40, "optimal_range_f": "45-85", "optimal_f": 80, "max_f": 100},
+        {"name": "celery", "min_f": 40, "optimal_range_f": "60-70", "optimal_f": 70, "max_f": 85},
+        {"name": "chard", "min_f": 40, "optimal_range_f": "50-85", "optimal_f": 85, "max_f": 95},
+        {"name": "cucumber", "min_f": 60, "optimal_range_f": "60-95", "optimal_f": 95, "max_f": 105},
+        {"name": "eggplant", "min_f": 60, "optimal_range_f": "75-90", "optimal_f": 85, "max_f": 95},
+        {"name": "lettuce", "min_f": 35, "optimal_range_f": "40-80", "optimal_f": 75, "max_f": 85},
+        {"name": "melons", "min_f": 60, "optimal_range_f": "75-95", "optimal_f": 90, "max_f": 100},
+        {"name": "onion", "min_f": 35, "optimal_range_f": "50-95", "optimal_f": 75, "max_f": 95},
+        {"name": "parsley", "min_f": 40, "optimal_range_f": "50-85", "optimal_f": 75, "max_f": 90},
+        {"name": "pepper", "min_f": 60, "optimal_range_f": "65-95", "optimal_f": 85, "max_f": 95},
+        {"name": "pumpkin", "min_f": 60, "optimal_range_f": "70-90", "optimal_f": 90, "max_f": 100},
+        {"name": "spinach", "min_f": 35, "optimal_range_f": "45-75", "optimal_f": 70, "max_f": 8},
+        {"name": "squash", "min_f": 60, "optimal_range_f": "70-95", "optimal_f": 95, "max_f": 10},
+        {"name": "tomato", "min_f": 50, "optimal_range_f": "70-95", "optimal_f": 85, "max_f": 95},
+    ]
+}

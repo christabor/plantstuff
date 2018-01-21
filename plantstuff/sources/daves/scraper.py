@@ -52,5 +52,36 @@ def get_all_species_links_on_page_all_pages():
     return data
 
 
+@cache_json(directory='../../data/daves')
+def get_real_plant_profile_link(name, ref_url):
+    """Get the real profile link.
+
+    Using all species/all pages data,
+    get the actual profile id link for the plant url.
+    """
+    data, dom = get_dom(ref_url)
+    link = dom.find('.plant-info-block > a')
+    url = 'https://davesgarden.com{}'.format(link.get('href'))
+    return {'ref': ref_url, 'real_url': url, 'name': name}
+
+
+@cache_json(directory='../../data/daves')
+def get_all_plant_profile_links():
+    """Get the real profile links.
+
+    Using all species/all pages data,
+    get the actual profile id link for each one.
+    """
+    data = []
+    link_data = get_all_species_links_on_page_all_pages()
+    links = []
+    for link in link_data:
+        links += link['data']
+    for link in links:
+        res = get_real_plant_profile_link(link['name'], link['url'])
+        data.append(res)
+    return data
+
+
 if __name__ == '__main__':
-    get_all_species_links_on_page_all_pages()
+    get_all_plant_profile_links()
