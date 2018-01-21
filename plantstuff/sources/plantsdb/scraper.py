@@ -1,24 +1,13 @@
-from collections import namedtuple
+"""Plantsdb.xyz "scraper"."""
 
 import requests
-
-from pyquery import PyQuery as Pq
-
-from plantstuff.core.cache import cache_html, cache_json
+from plantstuff.core.cache import cache_json
 
 API_URL = 'https://plantsdb.xyz/search?symbol={symbol}'
 USDA_PLANTLIST_URL = (
     'https://www.plants.usda.gov/java/downloadData?'
     'fileName=plantlst.txt&static=true'
 )
-
-
-@cache_html(directory='../../data/plantsdb')
-def get_dom(url):
-    """Get html and dom object."""
-    data = requests.get(url).content
-    dom = Pq(data)
-    return data, dom
 
 
 @cache_json(directory='../../data/plantsdb')
@@ -47,7 +36,7 @@ def get_all_data_from_usda_plants():
 
 @cache_json(directory='../../data/plantsdb')
 def get_data_by_symbol(symbol):
-    """Download api data by plant symbol"""
+    """Download api data by plant symbol."""
     res = requests.get(API_URL.format(symbol=symbol))
     if res.status_code == 200:
         return res.json()

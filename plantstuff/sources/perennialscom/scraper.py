@@ -1,30 +1,41 @@
 import requests
 
-from pyquery import PyQuery as Pq
-
-from plantstuff.core.cache import cache_html, cache_json
+from plantstuff.core import conf, fetch
+from plantstuff.core.cache import cache_json
 
 URL = 'http://www.perennials.com/plants/{plant}.html'
 
-# @cache_html(directory='../../data/perennialscom')
+get_dom = fetch.get_dom(directory='../../data/perennialscom')
+
+# @cache_json(directory='../../data/perennialscom')
+# def get_count_of_pages():
+#     """Figure out how many pages are available for each letter."""
+#     res = {}
+#     for letter in conf.LETTERS:
+#         content, dom = get_dom(
+#             'http://www.perennials.com/results_alphabet.html?'
+#             'start=0&letter={letter}'.format(letter=letter)
+#         )
+#         # Find the number of results shown, to determine how many
+#         # calls to make.
+#         dom.find('')
+#     return res
 
 
-def get_dom(url):
-    """Get html and dom object."""
-    data = requests.get(url).content
-    dom = Pq(data)
-    return data, dom
+# # @cache_json(directory='../../data/perennialscom')
+# def guess_plant():
+#     """Download api data by plant symbol for ALL plants."""
+#     per_page = 96
+#     content, dom = get_dom(
+#         'http://www.perennials.com/results_alphabet.html?'
+#         'start=0&letter={letter}'.format(letter='A')
+#     )
+#     for letter in conf.LETTERS:
+#         pages_per_letter =
+#         print(letter)
 
-
-# @cache_json(directory='../../data/plantsdb')
-def guess_plant():
-    """Download api data by plant symbol for ALL plants."""
-    content, dom = get_dom(
-        'http://www.perennials.com/results_alphabet.html?'
-        'start=0&letter={letter}'.format(letter='A')
-    )
-    urls = []
+#     urls = []
 
 
 if __name__ == '__main__':
-    guess_plant()
+    get_count_of_pages()

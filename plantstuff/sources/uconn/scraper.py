@@ -1,11 +1,10 @@
 """Scraper for university of connecticut horticulture page."""
-import requests
-
-from pyquery import PyQuery as Pq
-
-from plantstuff.core.cache import cache_html, cache_json
+from plantstuff.core import fetch
+from plantstuff.core.cache import cache_json
 
 URL = 'http://hort.uconn.edu'
+
+get_dom = fetch.get_dom(directory='../../data/uconn')
 
 
 def clean(text):
@@ -14,14 +13,6 @@ def clean(text):
         return
     text = text.replace('  ', ' ')
     return text.replace('\n', '').replace('\r', '').strip()
-
-
-@cache_html(directory='../../data/uconn')
-def get_dom(url):
-    """Get html and dom object."""
-    data = requests.get(url).content
-    dom = Pq(data)
-    return data, dom
 
 
 @cache_json(directory='../../data/uconn')

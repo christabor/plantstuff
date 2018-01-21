@@ -1,7 +1,7 @@
 """Scraping utils."""
-
 import hashlib
 import json
+import os
 
 from functools import wraps
 
@@ -58,4 +58,61 @@ def cache_html(directory=None):
                     html.write(data)
                 return data, dom
         return inner
+    return outer
+
+
+def cached(*cache_args, **cache_kwargs):
+    """General-purpose.
+
+    Allows custom filename, with function fallback.
+
+    Load/save cached function data. Also handle data types gracefully.
+
+    Example:
+        >>> cached('myfile.json', folder=SOME_DIR)
+        >>> def my_thing():
+        >>>    return {'foo': 'bar'}
+    """
+    def outer(func, *args, **kwargs):
+        folder = cache_kwargs.get('folder')
+        if len(cache_args) > 0:
+            name = cache_args[0]
+        else:
+            # Guess a resonable name.
+            name = func.__name__.replace('_', '-') + '.json'
+
+        def _inner(*args, **kwargs):
+            try:
+                # Allow users to specify non-existant subfolders
+                # but fail gracefully.
+                os.makedirs(folder)
+            except Exception:
+                pass
+            path = '{}/{}'.format(folder, name) if folder is not None else name
+            try:
+                with open(path, 'r') as _cached:
+                    if '.json' in name:
+                        return json.loads(_cached.read())
+                    else:
+                        return _cached.read()
+            except ValueError as exc:
+                if 'No JSON object could be decoded' in str(exc):
+                    return func(*args, **kwargs)
+            except IOError:
+                res = func(*args, **kwargs)
+                if res is None:
+                    return
+                with open(path, 'w') as _cached:
+                    if '.json' in name:
+                        try:
+                            to_write = json.dumps(res, indent=4)
+                        # The json was invalid, skip this.
+                        except TypeError:
+                            return res
+                    else:
+                        to_write = res
+                    _cached.write(to_write)
+                    _cached.write('\n')
+                    return res
+        return _inner
     return outer

@@ -4,23 +4,15 @@ from pprint import pprint as ppr
 
 import json
 import os
+
 from collections import defaultdict
 
-from pyquery import PyQuery as Pq
-import requests
+from plantstuff.core import conf, fetch
+from plantstuff.core.cache import cache_json
 
-from plantstuff.core.cache import cache_json, cache_html
-
-LETTERS = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'.split()
 MONROVIA_URL = 'http://www.monrovia.com/plant-catalog/plants/{plant_info}'
 
-
-@cache_html(directory='../../data/monrovia')
-def get_dom(url):
-    """Get html and dom object."""
-    data = requests.get(url).content
-    dom = Pq(data)
-    return data, dom
+get_dom = fetch.get_dom(directory='../../data/monrovia')
 
 
 def get_letter_search_results_monrovia(letter, start):
@@ -34,9 +26,11 @@ def get_letter_search_results_monrovia(letter, start):
 
 
 def get_all_letter_search_results_monrovia():
-    """Scrape all plant data, up to a number of search result pages,
-    per letter."""
-    for letter in LETTERS:
+    """Scrape all plant data.
+
+    We scrape up to a number of search result pages, per letter.
+    """
+    for letter in conf.LETTERS:
         # Defaults from 1-11
         for page in range(1, 12):
             get_letter_search_results_monrovia(letter, page)
@@ -66,22 +60,11 @@ def get_plants_grid_urls_letter_results_monrovia(letter, start):
 def get_plants_grid_all_letters_results_monrovia():
     """Return the grid of plant urls."""
     all_data = defaultdict(list)
-    for letter in LETTERS:
+    for letter in conf.LETTERS:
         for page in range(1, 12):
             res = get_plants_grid_urls_letter_results_monrovia(letter, page)
             all_data[letter].append(res)
     return all_data
-
-
-# def get_info(info):
-#     """Get plant info."""
-#     data, dom = get_dom(GARDEN_ORG_URL.format(plant_info=info))
-#     tables = dom.find('#ngabody').find('table')
-#     dfs = pd.read_html(str(tables))
-#     for table in dfs:
-#         for data in table.values:
-#             print(data)
-#             print('-----')
 
 
 @cache_json
@@ -151,15 +134,11 @@ def get_companion_plant_monrovia():
     return relationships
 
 
-# def get_usda_info(symbol):
-#     """Get plant info."""
-#     data = get_dom(USDA_URL.format(symbol=symbol))
-#     dom = Pq(data)
-
-
 @cache_json
 def get_all_plants_from_all_letters_all_pages_n_monrovia():
-    """Get all plant details for all letters A_Z for all page search results
+    """Get all plant details.
+
+    Get for all letters A_Z, for all page search results
     up to N (default 12, see other functions).
     """
     all_data = []
