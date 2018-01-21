@@ -6,7 +6,10 @@ import subprocess
 from plantstuff.core.cache import cache_json
 
 DATA_SOURCES = [
-    # 'daves', 'monrovia', 'plantsdb', 'uconn',
+    'daves',
+    'monrovia',
+    'plantsdb',
+    'uconn',
     'springhills',
 ]
 
@@ -17,14 +20,13 @@ def get_shell(cmd):
     return proc.stdout.read()
 
 
-def search_files(plant_name, ftype=None):
+def search_files(plant_name, filetype=None):
     """Try to build a set of info from all known sources of data."""
     # Try each variation of spaces, as a sort of fuzzy search.
     # Kind of lame, but it sort of works.
-    res = get_shell(
-        'ag "{} " -l data/'.format(plant_name)).split('\n')
-    if ftype is not None:
-        res = [f for f in res if f.endswith(ftype)]
+    res = get_shell('ag "{} " -l data/'.format(plant_name)).split('\n')
+    if filetype is not None:
+        res = [f for f in res if f.endswith(filetype)]
     return list(set(res))
 
 
@@ -32,7 +34,7 @@ def search_all_json(dossier, token):
     """Try to build a set of info from all known sources of json data."""
     for source in DATA_SOURCES:
         dossier[source] = {}
-    files = search_files(token, ftype='.json')
+    files = search_files(token, filetype='.json')
     # Db is recreated and very large. TODO: better organize/conventions.
     # _all_ typically means a group of combined datasets,
     # which is very large and redundant - TODO: also make this better.
