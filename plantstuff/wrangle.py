@@ -5,13 +5,16 @@ import subprocess
 
 from plantstuff.core.cache import cache_json
 
-DATA_SOURCES = ['daves', 'monrovia', 'plantsdb', 'uconn']
+DATA_SOURCES = [
+    # 'daves', 'monrovia', 'plantsdb', 'uconn',
+    'springhills',
+]
 
 
 def get_shell(cmd):
     """Get return stdout from a shell command."""
-    p = subprocess.Popen([cmd], stdout=subprocess.PIPE, shell=True)
-    return p.stdout.read()
+    proc = subprocess.Popen([cmd], stdout=subprocess.PIPE, shell=True)
+    return proc.stdout.read()
 
 
 def search_files(plant_name, ftype=None):
@@ -31,10 +34,14 @@ def search_all_json(dossier, token):
         dossier[source] = {}
     files = search_files(token, ftype='.json')
     # Db is recreated and very large. TODO: better organize/conventions.
+    # _all_ typically means a group of combined datasets,
+    # which is very large and redundant - TODO: also make this better.
     files = [f for f in files if '_db' not in f and '_all_' not in f]
     for file in files:
         # File format is data/<source>/fname
         source = file.split('/')[1]
+        if source not in dossier:
+            continue
         with open(file, 'r') as data:
             dossier[source][file] = json.loads(data.read())
     return dossier
@@ -56,6 +63,6 @@ def search_all_json_by_code(code):
 
 if __name__ == '__main__':
     # search_files('alder')
-    search_all_json_by_name('alder')
-    search_all_json_by_name('Magnolia')
+    # search_all_json_by_name('alder')
+    search_all_json_by_name('echinacea')
     # search_all_json_by_code('ABJA')
