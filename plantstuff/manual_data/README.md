@@ -1,0 +1,21 @@
+# Data set compilations
+
+## Botany
+
+### One-hundred plant species leaves data set Data Set
+
+* {IMAGE} "Sixteen samples of leaf each of one-hundred plant species. For each sample, a shape descriptor, fine scale margin and texture histogram are given.": https://archive.ics.uci.edu/ml/datasets/One-hundred+plant+species+leaves+data+set
+
+### Plants Data Set
+
+* {TEXT} Plants and states: https://archive.ics.uci.edu/ml/datasets/Plants
+* {IMAGE} ImageClef plant retrieval task: http://www.imageclef.org/2013/plant
+
+## Genetics
+
+* Plant genomics datasets: http://www.plantgdb.org/prj/
+
+### Other data sets lists
+
+* {TEXT} {IMAGE} Lists of plant datasets for machine learning: https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research#Plant
+* {IMAGE} Plant image analysis: http://www.plant-image-analysis.org/dataset

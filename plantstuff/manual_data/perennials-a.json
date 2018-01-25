@@ -1,0 +1,55 @@
+{
+    "source": "The Illustrated Encyclopedia of Perennials",
+    "source_type": "book",
+    "data": [
+        {
+            "name": "acaena caesiiglauca",
+            "family": "rosaceae",
+            "common_name": "sheepburr",
+            "height": "5in",
+            "spread": "3ft",
+            "aspect": "sun/half-shade",
+            "soil": "well-drained",
+            "hardiness": "zone 6",
+            "propagation": [
+                "seed:autumn",
+                "softwood cuttings:spring",
+                "division:spring,autumn"
+            ],
+            "description": "Semi-prostrate, evergreen subshrub. Leaves glaucous, pinnate, with 7-13 obovate leaflets. Flowerheads spherical, followed by reddish-brown burrs in late summer."
+        },
+        {
+            "name": "acaena microphylla",
+            "cultivar": "kupferteppich",
+            "family": "rosaceae",
+            "common_name": "sheepburr",
+            "height": "2in",
+            "spread": "24in",
+            "aspect": "sun/half-shade",
+            "soil": "not-waterlogged",
+            "hardiness": "zone 6",
+            "propagation": [
+                "seed:autumn",
+                "softwood cuttings:spring",
+                "division:spring,autumn"
+            ],
+            "description": "Prostrate, evergreen subshrub. Leaves bronze, pinnate, with 9-15 rounded leaflets. Flowerheads spherical, small, followed by red burrs. Good for rock garden or wall."
+        },
+        {
+            "name": "acanthus dioscoridis var. perringii",
+            "family": "acanthaceae",
+            "common_name": "bear's breech",
+            "height": "2in",
+            "spread": "24in",
+            "aspect": "sun/half-shade",
+            "soil": "well-drained",
+            "hardiness": "zone 8",
+            "propagation": [
+                "seed:spring",
+                "division:spring,autumn",
+                "root cuttings:winter"
+            ],
+            "description": "Evergreen with running, fleshy rootstalk. Leaves spiny, pinnatifid, gray-green, rosetted. Racemes of pink flowers with green bracts, late spring to late summer. Shy-flowering."
+        }
+    ]
+}
