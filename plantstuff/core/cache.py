@@ -69,12 +69,12 @@ def cached(*cache_args, **cache_kwargs):
     Load/save cached function data. Also handle data types gracefully.
 
     Example:
-        >>> cached('myfile.json', folder=SOME_DIR)
+        >>> cached('myfile.json', directory=SOME_DIR)
         >>> def my_thing():
         >>>    return {'foo': 'bar'}
     """
     def outer(func, *args, **kwargs):
-        folder = cache_kwargs.get('folder')
+        folder = cache_kwargs.get('directory')
         if len(cache_args) > 0:
             name = cache_args[0]
         else:
