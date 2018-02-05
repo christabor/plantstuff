@@ -11,6 +11,7 @@
 * {TEXT} Plants and states: https://archive.ics.uci.edu/ml/datasets/Plants
 * {IMAGE} ImageClef plant retrieval task: http://www.imageclef.org/2013/plant
 * {TEXT} Iris flower dataset: https://archive.ics.uci.edu/ml/datasets/iris
+* {IMAGE} Mixed flower image datasets: http://www.robots.ox.ac.uk/~vgg/data/flowers/
 
 #### Plant hormones, chemistry
 
@@ -20,6 +21,7 @@
 
 * {TEXT} {IMAGE} Lists of plant datasets for machine learning: https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research#Plant
 * {IMAGE} Plant image analysis: http://www.plant-image-analysis.org/dataset
+* {TEXT} {IMAGE} Lists of online plant databases (not datasets): https://en.wikipedia.org/wiki/Category:Online_botany_databases
 
 ## Genetics
 
