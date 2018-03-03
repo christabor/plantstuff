@@ -102,20 +102,20 @@ def get_monrovia_info(info):
 def load_monrovia_data():
     """Get all companion plant references and the plants they correspond to."""
     data = []
-    for file in os.listdir(os.getcwd()):
+    for file in os.listdir(os.getcwd() + '/data/monrovia'):
         if file.endswith('.json'):
-            p_data = open(file, 'r').read()
+            p_data = open('data/monrovia/' + file, 'r').read()
             p_data = json.loads(p_data)
             if 'url' in p_data and 'name' in p_data:
                 data.append(p_data)
     return data
 
 
-@cache_json
+@cache_json()
 def get_companion_plant_monrovia():
     """Get all companion plant references and the plants they correspond to."""
     relationships = []
-    for file in os.listdir(os.getcwd()):
+    for file in os.listdir(os.getcwd() + '/data/monrovia'):
         if file.endswith('.json'):
             p_data = open(file, 'r').read()
             p_data = json.loads(p_data)
