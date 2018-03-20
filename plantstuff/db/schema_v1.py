@@ -25,7 +25,7 @@ Ways to organize information:
     - etc
 """
 
-from plantstuff.db import locales, foliage, taxonomy
+from plantstuff.db import foliage, locales, taxonomy
 
 
 SOIL_PH_TOLERANCE_MAX_RANGE = [
@@ -2137,45 +2137,45 @@ TAXONOMY = {
         "name": "rosaceae",
         "common_name": {
             "type": "string",
-            "anyof": PLANT_COMMON_FAMILY_NAMES,
+            "anyof": taxonomy.PLANT_COMMON_FAMILY_NAMES,
         },
         "symbol": None,
     },
     "genus": {
         "type": "string",
-        "anyof": PLANT_GENUSES,
+        "anyof": taxonomy.PLANT_GENUSES,
     },
     "order": {
         "type": "string",
-        "anyof": PLANT_ORDERS,
+        "anyof": taxonomy.PLANT_ORDERS,
     },
     "subclass": {
         "type": "string",
-        "anyof": PLANT_SUBCLASSES,
+        "anyof": taxonomy.PLANT_SUBCLASSES,
     },
     "class": {
         "type": "string",
-        "anyof": PLANT_CLASSES,
+        "anyof": taxonomy.PLANT_CLASSES,
     },
     "subdivision": {
         "type": "string",
-        "anyof": PLANT_SUBDIVISIONS,
+        "anyof": taxonomy.PLANT_SUBDIVISIONS,
     },
     "division": {
         "type": "string",
-        "anyof": PLANT_DIVISIONS,
+        "anyof": taxonomy.PLANT_DIVISIONS,
     },
     "superdivision": {
         "type": "string",
-        "anyof": PLANT_SUPERDIVISIONS,
+        "anyof": taxonomy.PLANT_SUPERDIVISIONS,
     },
     "subkingdom": {
         "type": "string",
-        "anyof": PLANT_SUBKINGDOMS,
+        "anyof": taxonomy.PLANT_SUBKINGDOMS,
     },
     "kingdom": {
         "type": "string",
-        "anyof": PLANT_KINGDOMS,
+        "anyof": taxonomy.PLANT_KINGDOMS,
     },
     "itis_tns": None,
     "national_common_name": "sheepburr",
