@@ -24,7 +24,6 @@ Ways to organize information:
     - genetics
     - etc
 """
-
 from plantstuff.db import foliage, locales, taxonomy
 
 
@@ -127,11 +126,14 @@ GROWTH_FORMS = [
 ]
 # TODO: better classify.
 MISC = {
-    "palatable_animl_brs_condition": [
-        "low",
-        "medium",
-        "high",
-    ],
+    "palatable_animl_brs_condition": {
+        "type": "string",
+        "anyof": [
+            "low",
+            "medium",
+            "high",
+        ],
+    },
     "synonyms": [
         "accepted names and synonyms",
         "accepted names only",
@@ -157,12 +159,15 @@ MISC = {
             "yellow-green",
         ],
     },
-    "slin_tolerance_condition": [
-        "none",
-        "low",
-        "medium",
-        "high",
-    ],
+    "slin_tolerance_condition": {
+        "type": "string",
+        "anyof": [
+            "none",
+            "low",
+            "medium",
+            "high",
+        ]
+    },
     "family_sym": taxonomy.FAMILY_SYMBOLS,
     "vs_comm_avail": [
         "no known source",
@@ -184,7 +189,7 @@ MISC = {
             "only forma epithet"
         ],
     },
-    "prpg_sprig_ind": {
+    "propagation_sprig_ind": {
         "type": "bool",
     },
     "nat_wet_ind": [
@@ -259,12 +264,15 @@ MISC = {
     "plywd_vnr_suit_ind": {
         "type": "bool",
     },
-    "frut_seed_abund_condition": [
-        "none",
-        "low",
-        "medium",
-        "high"
-    ],
+    "frut_seed_abund_condition": {
+        "type": "string",
+        "allof": [
+            "none",
+            "low",
+            "medium",
+            "high"
+        ]
+    },
     "foddr_suit_ind": {
         "type": "bool",
     },
@@ -309,7 +317,7 @@ MISC = {
             "without state status"
         ],
     },
-    "prpg_sod_ind": {
+    "propagation_sod_ind": {
         "type": "bool",
     },
     "frut_seed_prst_ind": {
@@ -418,16 +426,19 @@ MISC = {
     "soil_adp_m_txt_ind": {
         "type": "bool",
     },
-    "bloat_pot_condition": [
-        "none",
-        "low",
-        "medium",
-        "high"
-    ],
+    "bloat_pot_condition": {
+        "type": "string",
+        "anyof": [
+            "none",
+            "low",
+            "medium",
+            "high"
+        ],
+    },
     "palatable_human_ind": {
         "type": "bool",
     },
-    "prpg_ctnr_ind": {
+    "propagation_ctnr_ind": {
         "type": "bool",
     },
     "growth_habit_condition": {
@@ -452,7 +463,7 @@ MISC = {
     "navl_stor_suit_ind": {
         "type": "bool",
     },
-    "grwhabt": {
+    "growth_habit": {
         "type": "string",
         "anyof": [
             "forb/herb",
@@ -488,7 +499,7 @@ MISC = {
     },
     "hybrids": [
         "only hybrids",
-        "only non-hybrids"
+        "only non-hybrids",
     ],
     "folg_txt_condition": {
         "type": "string",
@@ -550,17 +561,16 @@ MISC = {
         "region c (caribbean)",
         "region h (hawaii)"
     ],
-    "prpg_tubr_ind": {
+    "propagation_tubr_ind": {
         "type": "bool",
     },
     "plantfact_ind": [
         "only with fact sheets",
-        "only without fact sheets"
+        "only without fact sheets",
     ],
-    "grass_low_grw_ind": [
-        "yes",
-        "no"
-    ],
+    "grass_low_grw_ind": {
+        "type": "bool",
+    },
     "pfa": [
         "plants floristic area",
         "--north america",
@@ -853,7 +863,7 @@ MISC = {
             "year-round",
         ],
     },
-    "prpg_cut_ind": [
+    "propagation_cut_ind": [
         "yes",
         "no",
     ],
@@ -1100,7 +1110,9 @@ TAXONOMY = {
         "type": "string",
         "anyof": taxonomy.PLANT_CATEGORY,
     },
-    "scientific_name": "acaena caesiiglauca",
+    "scientific_name": {
+        "type": "string",
+    },
     "family": {
         "name": "rosaceae",
         "common_name": {
@@ -1217,7 +1229,7 @@ REPRODUCTION = {
         "nullable": True,
         "anyof": [
             "hermaphroditic",
-            "unisexual"
+            "unisexual",
         ],
     },
     "unisex_type": {
@@ -1375,7 +1387,7 @@ SCHEMA = {
                 "annual",
                 "biennial",
                 "perennial",
-                "unknown"
+                "unknown",
             ]
         },
         "growth_habitat": "forb",
@@ -1389,8 +1401,9 @@ SCHEMA = {
         },
         "endemic": {
             "type": "bool",
-                    "default": False,
-                    "nullable": True},
+            "default": False,
+            "nullable": True,
+        },
     },
     "hardwood": {
         "type": "bool",
@@ -1434,7 +1447,7 @@ SCHEMA = {
             "anyof": [
                 "low",
                 "medium",
-                "high"
+                "high",
             ]
         },
         "coppice_potential": None,
@@ -1514,7 +1527,7 @@ SCHEMA = {
                     "60-99.9",
                     "100-149.9",
                     "150-199.9",
-                    "200-250"
+                    "200-250",
                 ],
             },
         },

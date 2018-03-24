@@ -1,0 +1,5 @@
+"""Foliage categories."""
+
+FOLIAGE_TYPES = []
+FOLIAGE_MORPHOLOGY_TYPES = []
+FOLIAGE_ARRANGEMENT_TYPES = []
