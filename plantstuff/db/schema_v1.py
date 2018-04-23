@@ -23,8 +23,90 @@ Ways to organize information:
     - horticulture
     - genetics
     - etc
+
+
+https://plants.usda.gov/charinfo.html
 """
+
+from collections import namedtuple
+
+from marshmallow import Schema, fields
+
+from marshmallow import validate
 from plantstuff.db import foliage, locales, taxonomy
+
+
+class Plant(Schema):
+    """The most generalized plant object."""
+
+    name = fields.Str(required=True)
+    scientific_name = fields.Str()
+    national_common_name = fields.Str()
+    common_aliases = fields.List(fields.Str)
+    foliage_color = fields.Str()
+    base_growth_form = fields.Str(validate=validate.OneOf([
+        "climbing",
+        "columnar",
+        "conical",
+        "decumbent",
+        "erect",
+        "irregular",
+        "oval",
+        "prostrate",
+        "rounded",
+        "semi-erect",
+        "vase",
+    ]))
+    usda_zone = fields.List(fields.Str, validate=validate.OneOf([
+        "1a", "1b",
+        "2a", "2b",
+        "3a", "3b",
+        "4a", "4b",
+        "5a", "5b",
+        "6a", "6b",
+        "7a", "7b",
+        "8a", "8b",
+        "9a", "9b",
+        "10a", "10b",
+        "11a", "11b",
+        "12a", "12b",
+        "13a", "13b",
+    ]))
+    sunset_zone = fields.List(fields.Str, validate=validate.OneOf([]))
+
+
+class Tolerance(Schema):
+    """A plant tolerance type."""
+
+    name = fields.Str(required=True)
+    unit = fields.Str(required=True)
+    min_range = fields.Float(required=True)
+    max_range = fields.Float(required=True)
+
+
+class Tag(Schema):
+    """A plant descriptor tag."""
+
+    name = fields.Str(required=True)
+
+
+class Bark(Schema):
+    """Bark of a plant."""
+
+    # http://www.backyardnature.net/treebark.htm
+    type = fields.List(fields.Str(validate=validate.OneOf([
+        "smooth",
+        "scaly",
+        "plated",
+        "warty",
+        "shaggy",
+        "papery",
+        "furrowed",
+        "fibrous",
+    ])))
+    color = fields.Str()
+    # Unit should be in XXX
+    thickness = fields.Float()
 
 
 SOIL_PH_TOLERANCE_MAX_RANGE = [
@@ -111,19 +193,6 @@ ROOT_DEPTH_MIN_RANGE = [
     "48-51",
     "52-120",
 ]
-GROWTH_FORMS = [
-    "climbing",
-    "columnar",
-    "conical",
-    "decumbent",
-    "erect",
-    "irregular",
-    "oval",
-    "prostrate",
-    "rounded",
-    "semi-erect",
-    "vase",
-]
 # TODO: better classify.
 MISC = {
     "palatable_animl_brs_condition": {
@@ -148,17 +217,6 @@ MISC = {
         "only with plant guides",
         "only without plant guides",
     ],
-    "folg_color_condition": {
-        "type": "string",
-        "anyof": [
-            "dark green",
-            "green",
-            "gray-green",
-            "red",
-            "white-gray",
-            "yellow-green",
-        ],
-    },
     "slin_tolerance_condition": {
         "type": "string",
         "anyof": [
@@ -192,29 +250,6 @@ MISC = {
     "propagation_sprig_ind": {
         "type": "bool",
     },
-    "nat_wet_ind": [
-        "with wetland status",
-        "--obl (obligate wetland)",
-        "--obl? (possibly obligate wetland)",
-        "--facw+ (facultative wetland+)",
-        "--facw+? (possibly facultative wetland+)",
-        "--facw (facultative wetland)",
-        "--facw? (possibly facultative wetland)",
-        "--facw- (facultative wetland-)",
-        "--facw-? (possibly facultative wetland-)",
-        "--fac+ (facultative+)",
-        "--fac+? (possibly facultative+)",
-        "--fac (facultative)",
-        "--fac? (possibly facultative)",
-        "--fac- (facultative-)",
-        "--fac-? (possibly facultative-)",
-        "--facu+ (facultative upland+)",
-        "--facu (facultative upland)",
-        "--facu? (possibly facultative upland)",
-        "--facu- (facultative upland-)",
-        "--upl (obligate upland)",
-        "without wetland status (upland plants)"
-    ],
     "temp_tolerance_min_range": [
         "-75--53",
         "-52--48",
@@ -351,78 +386,6 @@ MISC = {
     "cold_strat_ind": {
         "type": "bool",
     },
-    "native_status_code": [
-        "native to plants floristic area",
-        "--north america native",
-        "\u00a0\u00a0--l48 native",
-        "\u00a0\u00a0--ak native",
-        "\u00a0\u00a0--can native",
-        "\u00a0\u00a0--gl native",
-        "\u00a0\u00a0--spm native",
-        "--hi native",
-        "--pr native",
-        "--vi native",
-        "introduced to plants floristic area",
-        "--north america introduced",
-        "\u00a0\u00a0--l48 introduced",
-        "\u00a0\u00a0--ak introduced",
-        "\u00a0\u00a0--can introduced",
-        "\u00a0\u00a0--gl introduced",
-        "\u00a0\u00a0--spm introduced",
-        "--hi introduced",
-        "--pr introduced",
-        "--vi introduced"
-    ],
-    "state_nox_status": [
-        "with state status",
-        "--alaska",
-        "--alabama",
-        "--arkansas",
-        "--arizona",
-        "--california",
-        "--colorado",
-        "--connecticut",
-        "--delaware",
-        "--florida",
-        "--hawaii",
-        "--iowa",
-        "--idaho",
-        "--illinois",
-        "--indiana",
-        "--kansas",
-        "--kentucky",
-        "--louisiana",
-        "--massachusetts",
-        "--maryland",
-        "--maine",
-        "--michigan",
-        "--minnesota",
-        "--missouri",
-        "--mississippi",
-        "--montana",
-        "--north carolina",
-        "--north dakota",
-        "--nebraska",
-        "--new hampshire",
-        "--new mexico",
-        "--nevada",
-        "--ohio",
-        "--oklahoma",
-        "--oregon",
-        "--pennsylvania",
-        "--south carolina",
-        "--south-dakota",
-        "--tennessee",
-        "--texas",
-        "--utah",
-        "--virginia",
-        "--vermont",
-        "--washington",
-        "--wisconsin",
-        "--west-virginia",
-        "--wyoming",
-        "without state status"
-    ],
     "soil_adp_m_txt_ind": {
         "type": "bool",
     },
@@ -454,12 +417,15 @@ MISC = {
             "thicket forming",
         ],
     },
-    "fire_tolerance_condition": [
-        "none",
-        "low",
-        "medium",
-        "high"
-    ],
+    "fire_tolerance_condition": {
+        "type": "string",
+        "anyof": [
+            "none",
+            "low",
+            "medium",
+            "high"
+        ],
+    },
     "navl_stor_suit_ind": {
         "type": "bool",
     },
@@ -509,31 +475,6 @@ MISC = {
             "coarse",
         ],
     },
-    "nreg_wet_status": [
-        "with wetland status",
-        "--obl (obligate wetland)",
-        "--obl* (tentatively obligate wetland)",
-        "--facw+ (facultative wetland+)",
-        "--facw (facultative wetland)",
-        "--facw* (tentatively facultative wetland)",
-        "--facw- (facultative wetland-)",
-        "--facw-* (tentatively facultative wetland-)",
-        "--fac+ (facultative+)",
-        "--fac+* (tentatively facultative+)",
-        "--fac (facultative)",
-        "--fac* (tentatively facultative)",
-        "--fac- (facultative-)",
-        "--fac-* (tentatively facultative-)",
-        "--facu+ (facultative upland+)",
-        "--facu+* (tentatively facultative upland+)",
-        "--facu (facultative upland)",
-        "--facu* (tentatively facultative upland)",
-        "--facu- (facultative upland-)",
-        "--facu-* (tentatively facultative upland-)",
-        "--upl (obligate upland)",
-        "--upl* (tentatively obligate upland)",
-        "without wetland status (upland plants)"
-    ],
     "leaf_retnt_ind": {
         "type": "bool",
     },
@@ -544,24 +485,6 @@ MISC = {
         "without federal status"
     ],
     "soil_adp_f_txt_ind": {
-        "type": "bool",
-    },
-    "wet_region": [
-        "region 1 (northeast)",
-        "region 2 (southeast)",
-        "region 3 (north central)",
-        "region 4 (north plains)",
-        "region 5 (central plains)",
-        "region 6 (south plains)",
-        "region 7 (southwest)",
-        "region 8 (intermountain)",
-        "region 9 (northwest)",
-        "region 0 (california)",
-        "region a (alaska)",
-        "region c (caribbean)",
-        "region h (hawaii)"
-    ],
-    "propagation_tubr_ind": {
         "type": "bool",
     },
     "plantfact_ind": [
@@ -587,12 +510,6 @@ MISC = {
     "coppice_pot_ind": [
         "yes",
         "no"
-    ],
-    "fed_nox_status_ind": [
-        "with federal status",
-        "--noxious weed",
-        "--quarantine",
-        "without federal status"
     ],
     "sm_grain_ind": [
         "yes",
@@ -899,75 +816,6 @@ SEED_PER_LB_RANGE = [
     "30000000-39999999",
     "40000000-49999999"
 ]
-PROPAGATION_METHODS = {
-    "type": "list",
-    "schema": {
-        "recommended_months": {
-            "type": "string",
-            "anyof": [
-                "january",
-                "february",
-                "march",
-                "april",
-                "may",
-                "june",
-                "july",
-                "august",
-                "september",
-                "october",
-                "november",
-                "december",
-            ],
-        },
-        "propagation_type": {
-            "type": "string",
-            "anyof": [
-                "corm",
-                "bulb",
-                "sprig",
-                "tuber",
-                "seed",
-                "sod",
-                "bare_root",
-                "root_division",
-                "tissue_culture",
-            ],
-        },
-    },
-}
-[
-    {
-        "success_factors": [
-            {
-                "name": "scarification", "value": True,
-                "recommended_months": ["april", "may"]
-            },
-            {
-                "name": "stratification", "value": True,
-                "recommended_months": ["april", "may"]
-            },
-        ]
-    },
-    {
-        "type": "vegetative_cutting_semiripe",
-        "success_factors": [
-            {"name": "IBA", "value": "1000", "units": "PPM"},
-            {"name": "NAA", "value": "1000", "units": "PPM"},
-            {"name": "IAA", "value": "1000", "units": "PPM"},
-        ],
-        "recommended_months": []
-    },
-    {
-        "type": "vegetative_cutting_greenwood", "recommended_months": []
-    },
-    {
-        "type": "vegetative_cutting_hardwood", "recommended_months": []
-    },
-    {
-        "type": "vegetative_cutting_softwood", "recommended_months": []
-    },
-]
-
 GROWTH_TOLERANCES = {
     "fire": "high",
     "salinity": "intermediate",
@@ -1041,6 +889,7 @@ GROWTH_REQUIREMENTS = {
         "type": "float",
         "min": 0.0,
     },
+    "tolerance": GROWTH_TOLERANCES,
     "aspect": "sun/half-shade",
     "moisture_use": "medium",
     "ph": {
@@ -1060,30 +909,8 @@ GROWTH_REQUIREMENTS = {
         "min": -40,
         "max": 90
     },
-    "tolerance": GROWTH_TOLERANCES,
     "water_requirements": "mostly_wet",
     "drainage": "well-drained",
-    "hardiness": {
-        "usda_zone": {
-            "type": "string",
-            "anyof": [
-                "1a", "1b",
-                "2a", "2b",
-                "3a", "3b",
-                "4a", "4b",
-                "5a", "5b",
-                "6a", "6b",
-                "7a", "7b",
-                "8a", "8b",
-                "9a", "9b",
-                "10a", "10b",
-                "11a", "11b",
-                "12a", "12b",
-                "13a", "13b",
-            ]
-        },
-        "sunset_zone": [],
-    },
     "root": {
         "depth": {
             "type": "string",
@@ -1092,174 +919,7 @@ GROWTH_REQUIREMENTS = {
         "primary_type": "taproot",
     }
 }
-
-TAXONOMY = {
-    "cultivars": [
-        {
-            "name": "string",
-            "flower_colors": {
-                "type": "list",
-                "schema": {
-                    "type": "string",
-                }
-            },
-            "description": "string",
-        },
-    ],
-    "category": {
-        "type": "string",
-        "anyof": taxonomy.PLANT_CATEGORY,
-    },
-    "scientific_name": {
-        "type": "string",
-    },
-    "family": {
-        "name": "rosaceae",
-        "common_name": {
-            "type": "string",
-            "anyof": taxonomy.PLANT_COMMON_FAMILY_NAMES,
-        },
-        "symbol": None,
-    },
-    "genus": {
-        "type": "string",
-        "anyof": taxonomy.PLANT_GENUSES,
-    },
-    "order": {
-        "type": "string",
-        "anyof": taxonomy.PLANT_ORDERS,
-    },
-    "subclass": {
-        "type": "string",
-        "anyof": taxonomy.PLANT_SUBCLASSES,
-    },
-    "class": {
-        "type": "string",
-        "anyof": taxonomy.PLANT_CLASSES,
-    },
-    "subdivision": {
-        "type": "string",
-        "anyof": taxonomy.PLANT_SUBDIVISIONS,
-    },
-    "division": {
-        "type": "string",
-        "anyof": taxonomy.PLANT_DIVISIONS,
-    },
-    "superdivision": {
-        "type": "string",
-        "anyof": taxonomy.PLANT_SUPERDIVISIONS,
-    },
-    "subkingdom": {
-        "type": "string",
-        "anyof": taxonomy.PLANT_SUBKINGDOMS,
-    },
-    "kingdom": {
-        "type": "string",
-        "anyof": taxonomy.PLANT_KINGDOMS,
-    },
-    "itis_tns": None,
-    "national_common_name": {
-        "type": "string",
-    },
-    "common_aliases": [],
-}
-LEGAL = {
-    "copyrighted": {
-        "type": "bool",
-        "default": False,
-        "nullable": True,
-    },
-    "gmo": {
-        "type": "bool",
-        "default": False,
-        "nullable": True,
-    },
-    "patented": {
-        "type": "bool",
-        "default": False,
-        "nullable": True,
-    },
-    "us_federal_noxious_status": None,
-    "us_federal_noxious_common_name": None,
-    "us_state_noxious_status": None,
-    "us_plant_invasive_status": None,
-    "us_federal_te_status": None,
-    "us_federal_te_common_name": None,
-    "us_state_te_status": None,
-    "us_state_te_common_name": None,
-    "us_national_wetland_indicator_status": None,
-    "us_regional_wetland_indicator_region": None,
-    "us_regional_wetland_indicator_status": None
-}
-POLLINATION_METHODS = {
-    # https://en.wikipedia.org/wiki/Flower#Attraction_methods
-    "attraction_method": {
-        "type": "string",
-        "anyof": ["nectar"]
-    },
-    "attraction_speciality": "ultraviolet",
-    "mechanism": [
-        "entomophilous",
-        "anemophilous",
-    ],
-    "methods": {
-        "abiotic": {
-            "nullable": True,
-            "type": "string",
-            "anyof": [
-                "wind--anemophily",
-                "water--hydrophily"
-            ],
-        },
-        "biotic": {
-            "nullable": True,
-            "type": "string",
-            "anyof": [
-                "insects--entomophily",
-                "birds--ornithophily",
-                "bats--chiropterophily"
-            ],
-        },
-    },
-}
 REPRODUCTION = {
-    "fertility_requirement": "low",
-    "sexual_organs": {
-        "type": "string",
-        "nullable": True,
-        "anyof": [
-            "hermaphroditic",
-            "unisexual",
-        ],
-    },
-    "unisex_type": {
-        "type": "string",
-        "nullable": True,
-        "anyof": [
-            "monoecious",
-            "dioecious",
-        ],
-    },
-    "stamens": None,
-    "pistil": None,
-    "pollination": POLLINATION_METHODS,
-    "bloom_period": {
-        "type": "string",
-        "anyof": [
-            "spring",
-            "early-spring",
-            "mid-spring",
-            "late-spring",
-            "summer",
-            "early-summer",
-            "mid-summer",
-            "late-summer",
-            "fall",
-            "winter",
-            "late-winter",
-            "indeterminate",
-        ],
-    },
     "commercial_availability": None,
     "fruit_seed": {
         "dispersal": {
@@ -1310,241 +970,115 @@ REPRODUCTION = {
         }
     }
 }
-USES = {
-    "berry_nut_seed": None,
-    "christmas_tree": {
-        "type": "bool",
-        "default": False,
-        "nullable": True,
-    },
-    "fodder": None,
-    "fuelwood": {
+MORPHOLOGY_PHYSIOLOGY = {
+    # "bark": ...,
+    "active_growth_period": None,
+    "after_harvest_regrowth_rate": None,
+    "bloat": None,
+    "c_to_n_ratio": {
         "type": "string",
         "anyof": [
             "low",
             "medium",
             "high",
-        ],
-    },
-    "lumber": {
-        "type": "bool",
-        "default": False,
-        "nullable": True,
-    },
-    "naval_store_product": {
-        "type": "bool",
-        "default": False,
-        "nullable": True,
-    },
-    "nursery_stock_product": {
-        "type": "bool",
-        "default": True,
-        "nullable": True,
-    },
-    "palatable_browse_animal": None,
-    "post_product": None,
-    "protein_potential_condition": {
-        "type": "string",
-        "anyof": [
-            "low",
-            "medium",
-            "high"
-        ],
-    },
-    "pulpwood_product": {
-        "type": "bool",
-    },
-    "veneer_product": None,
-    "carbon_sequestration": {
-        "type": "string",
-        "anyof": ["low", "medium", "high"],
-    },
-}
-CONCERNS = {
-    "allelopathic": False,
-    "toxicity": {
-        "type": "string",
-        "anyof": [
-            "none",
-            "slight",
-            "moderate",
-            "severe",
-        ],
-    },
-    "toxicity_locations": {
-        "type": "list",
-        "anyof": [
-            "root", "leaf", "stem",
         ]
     },
-}
-SCHEMA = {
-    "taxonomy": TAXONOMY,
-    "ecology": {
-        "duration": {
+    "coppice_potential": None,
+    "fall_conspicous": None,
+    "fire_resistance": {
+        "type": "bool",
+        "default": False,
+    },
+    # "foliage": foliage.FOLIAGE_PHYSIOLOGY,
+    "growth": {
+        "vegetate_spread_rate": {
             "type": "string",
             "anyof": [
-                "annual",
-                "biennial",
-                "perennial",
-                "unknown",
-            ]
+                "slow",
+                "moderate",
+                "rapid"
+            ],
         },
+        "avg_root_depth": "2ft",
+        "avg_spread": "3ft",
+        "avg_landscape_size": "Fast grower to 24 to 36 in.",
+        "avg_per_year": "2ft",
+    },
+    "height": {
+        "avg": "5in",
+        "at_base_max": {
+            "type": "float",
+            "default": 0.0,
+        },
+        "at_maturity_range": {
+            "type": "string",
+            "anyof": [
+                "0-0.9",
+                "1-1.9",
+                "2-2.9",
+                "3-3.9",
+                "4-5.9",
+                "6-9.9",
+                "10-19.9",
+                "20-39.9",
+                "40-59.9",
+                "60-99.9",
+                "100-149.9",
+                "150-199.9",
+                "200-250",
+            ],
+        },
+    },
+    "leaf_retention": {
+        "type": "bool",
+        "nullable": True,
+    },
+    "lifespan": "moderate",
+    "low_growing_grass": None,
+    "nitrogen_fixation": None,
+    "resprout_ability": None,
+    "shape_and_orientation": None,
+}
+
+
+"""
+RELATIONSHIPS - SCHEMA TBD:
+
+Plant -> hasCultivars -> Cultivar
+Cultivar -> isA -> Plant
+
+"""
+
+# TODO: is this the right approach? Does Marshmallow have an equivalent?
+Relationship = namedtuple('Relationship', 'start, edge_name, end, desc')
+
+RELATIONSHIPS = [
+    Relationship(
+        start=Plant, edge_name='hasCultivar',
+        end=taxonomy.Cultivar,
+        desc=''),
+
+    Relationship(
+        start=taxonomy.Cultivar,
+        edge_name='isA',
+        end=Plant,
+        desc=''),
+]
+
+SCHEMA = {
+    "itis_tns": None,
+    "ecology": {
         "growth_habitat": "forb",
         "native_status": None
     },
-    "distribution": {
-        "locales": {
-            "type": "string",
-            # TODO: add world countries, etc... granularity TBD.
-            "anyof": locales.US_COUNTIES
-        },
-        "endemic": {
-            "type": "bool",
-            "default": False,
-            "nullable": True,
-        },
-    },
+    # "distribution": DISTRIBUTION,
     "hardwood": {
         "type": "bool",
         "default": False,
         "nullable": True,
     },
     "hardwood_scale": None,
-    "propagation_methods": PROPAGATION_METHODS,
-    "tags": {
-        "type": "list",
-        "schema": {
-            "type": "string",
-        },
-    },
-    "legal": LEGAL,
-    "morphology_and_physiology": {
-        # http://www.backyardnature.net/treebark.htm
-        "bark": {
-            "type": "list",
-            "schema": {
-                "type": "string",
-                "anyof": [
-                    "smooth",
-                    "scaly",
-                    "plated",
-                    "warty",
-                    "shaggy",
-                    "papery",
-                    "furrowed",
-                    "fibrous",
-                ],
-            },
-            "thickness": None,
-            "color": None
-        },
-        "active_growth_period": None,
-        "after_harvest_regrowth_rate": None,
-        "bloat": None,
-        "c_to_n_ratio": {
-            "type": "string",
-            "anyof": [
-                "low",
-                "medium",
-                "high",
-            ]
-        },
-        "coppice_potential": None,
-        "fall_conspicous": None,
-        "fire_resistance": {
-            "type": "bool",
-            "default": False,
-        },
-        "flower": {
-            "flower_type": "rosate",
-            "inflorescence": True,
-            "color": None,
-            "conspicous": None,
-            # https://en.wikipedia.org/wiki/Floral_formula
-            "floral_formula": {
-                "type": "string",
-            },
-        },
-        "foliage": {
-            "type": {
-                "type": "string",
-                "anyof": foliage.FOLIAGE_TYPES,
-            },
-            "anatomy": {
-                "type": "string",
-                "anyof": foliage.FOLIAGE_MORPHOLOGY_TYPES
-            },
-            "arrangement": {
-                "type": "string",
-                "anyof": foliage.FOLIAGE_ARRANGEMENT_TYPES,
-            },
-            "foliage_color": {
-                "type": "string",
-            },
-            "porosity_summer": None,
-            "porosity_winter": None,
-            "texture": None,
-            "striped": False,
-            "variegated": False
-        },
-        "growth": {
-            "form": {
-                "type": "string",
-                "anyof": GROWTH_FORMS,
-            },
-            "vegetate_spread_rate": {
-                "type": "string",
-                "anyof": [
-                    "slow",
-                    "moderate",
-                    "rapid"
-                ],
-            },
-            "avg_root_depth": "2ft",
-            "avg_spread": "3ft",
-            "avg_landscape_size": "Fast grower to 24 to 36 in.",
-            "avg_per_year": "2ft",
-        },
-        "height": {
-            "avg": "5in",
-            "at_base_max": {
-                "type": "float",
-                "default": 0.0,
-            },
-            "at_maturity_range": {
-                "type": "string",
-                "anyof": [
-                    "0-0.9",
-                    "1-1.9",
-                    "2-2.9",
-                    "3-3.9",
-                    "4-5.9",
-                    "6-9.9",
-                    "10-19.9",
-                    "20-39.9",
-                    "40-59.9",
-                    "60-99.9",
-                    "100-149.9",
-                    "150-199.9",
-                    "200-250",
-                ],
-            },
-        },
-        "leaf_retention": {
-            "type": "bool",
-            "nullable": True,
-        },
-        "lifespan": "moderate",
-        "low_growing_grass": None,
-        "nitrogen_fixation": None,
-        "resprout_ability": None,
-        "shape_and_orientation": None,
-    },
-    "concerns": CONCERNS,
+    "morphology_and_physiology": MORPHOLOGY_PHYSIOLOGY,
     "reproduction": REPRODUCTION,
     "growth_requirements": GROWTH_REQUIREMENTS,
-    # https://plants.usda.gov/adv_search.html
-    # "Suitability/Use" section.
-    "suitability_use": USES,
 }

@@ -1,4 +1,6 @@
 """Foliage categories."""
+from marshmallow import Schema, fields
+from marshmallow import validate
 
 FOLIAGE_TYPES = [
     "brevideciduous",
@@ -60,3 +62,21 @@ FOLIAGE_MORPHOLOGY_TYPES = [
     "tripinnatisect",
     "pinnatisect",
 ]
+
+
+class Foliage(Schema):
+    """The plant foliage type."""
+
+    type = fields.Str(validate=validate.OneOf(FOLIAGE_TYPES))
+    anatomy = fields.List(fields.Str(
+        validate=validate.OneOf(FOLIAGE_MORPHOLOGY_TYPES)
+    ))
+    arrangement = fields.Str(
+        validate=validate.OneOf(FOLIAGE_ARRANGEMENT_TYPES))
+    color = fields.List(fields.Str)
+    texture = fields.List(fields.Str)
+    striped = fields.Bool(fields.Str)
+    variegated = fields.Bool(fields.Str)
+
+    porosity_summer = fields.Str()
+    porosity_winter = fields.Str()

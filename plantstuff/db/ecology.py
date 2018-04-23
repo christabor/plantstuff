@@ -1,4 +1,10 @@
-"""Locale specific data for the master schema."""
+"""Locale specific data for the master schema.
+
+TODO: add world countries, etc... granularity TBD.
+"""
+
+from marshmallow import Schema, fields
+from marshmallow import validate
 
 US_COUNTIES = [
     "alabama:autauga",
@@ -3095,3 +3101,81 @@ US_COUNTIES = [
     "wyoming:weston",
 ]
 COUNTRIES = []
+
+WETLAND_STATUSES = [
+    "with wetland status",
+    "--obl (obligate wetland)",
+    "--obl? (possibly obligate wetland)",
+    "--facw+ (facultative wetland+)",
+    "--facw+? (possibly facultative wetland+)",
+    "--facw (facultative wetland)",
+    "--facw? (possibly facultative wetland)",
+    "--facw- (facultative wetland-)",
+    "--facw-? (possibly facultative wetland-)",
+    "--fac+ (facultative+)",
+    "--fac+? (possibly facultative+)",
+    "--fac (facultative)",
+    "--fac? (possibly facultative)",
+    "--fac- (facultative-)",
+    "--fac-? (possibly facultative-)",
+    "--facu+ (facultative upland+)",
+    "--facu (facultative upland)",
+    "--facu? (possibly facultative upland)",
+    "--facu- (facultative upland-)",
+    "--upl (obligate upland)",
+    "without wetland status (upland plants)",
+]
+
+
+class WetlandEcology(Schema):
+    """Ecological information specific to wetlands."""
+
+    native_wetland_indicator = fields.List(
+        fields.Str,
+        validate=validate.OneOf(WETLAND_STATUSES),
+    )
+    us_wetland_region = fields.List(fields.Str, validate=validate.OneOf([
+        "region 1 (northeast)",
+        "region 2 (southeast)",
+        "region 3 (north central)",
+        "region 4 (north plains)",
+        "region 5 (central plains)",
+        "region 6 (south plains)",
+        "region 7 (southwest)",
+        "region 8 (intermountain)",
+        "region 9 (northwest)",
+        "region 0 (california)",
+        "region a (alaska)",
+        "region c (caribbean)",
+        "region h (hawaii)"
+    ]))
+
+
+class Ecology(Schema):
+    """The locations and enviromental relationships."""
+
+    native_status_code = fields.Str(required=True, validate=validate.OneOf([
+        "native to plants floristic area",
+        "--north america native",
+        "\u00a0\u00a0--l48 native",
+        "\u00a0\u00a0--ak native",
+        "\u00a0\u00a0--can native",
+        "\u00a0\u00a0--gl native",
+        "\u00a0\u00a0--spm native",
+        "--hi native",
+        "--pr native",
+        "--vi native",
+        "introduced to plants floristic area",
+        "--north america introduced",
+        "\u00a0\u00a0--l48 introduced",
+        "\u00a0\u00a0--ak introduced",
+        "\u00a0\u00a0--can introduced",
+        "\u00a0\u00a0--gl introduced",
+        "\u00a0\u00a0--spm introduced",
+        "--hi introduced",
+        "--pr introduced",
+        "--vi introduced"
+    ]))
+    locales = fields.List(fields.Str, validate=validate.OneOf(US_COUNTIES))
+    # TODO: add
+    # "nreg_wet_status =

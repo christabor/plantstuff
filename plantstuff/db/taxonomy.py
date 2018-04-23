@@ -1,5 +1,9 @@
 """Taxonomy, naming categories."""
 
+from marshmallow import Schema, fields
+from marshmallow import validate
+
+
 PLANT_CATEGORY = [
     "dicot",
     "fern",
@@ -1652,3 +1656,84 @@ FAMILY = [
     "zosteraceae",
     "zygophyllaceae",
 ]
+
+
+class Category(Schema):
+    """The plant category."""
+
+    name = fields.Str(required=True,
+                      validate=validate.Onef(PLANT_CATEGORY))
+
+
+class Class(Schema):
+    """The plant class."""
+
+    name = fields.Str(required=True,
+                      validate=validate.Onef(PLANT_CLASSES))
+
+
+class Cultivar(Schema):
+    """The plant cultivar."""
+
+    name = fields.Str(required=True)
+    common_name = fields.Str(required=True)
+    description = fields.Str()
+
+    # Maybe?
+    # flower_colors = fields.List(fields.Str)
+
+
+class Division(Schema):
+    """The plant division."""
+
+    name = fields.Str(required=True,
+                      validate=validate.Onef(PLANT_DIVISIONS))
+
+
+class Family(Schema):
+    """The plant family."""
+
+    name = fields.Str(required=True,
+                      validate=validate.Onef(PLANT_COMMON_FAMILY_NAMES))
+
+
+class Genus(Schema):
+    """The plant genus."""
+
+    name = fields.Str(required=True,
+                      validate=validate.Onef(PLANT_GENUSES))
+
+
+class Order(Schema):
+    """The plant order."""
+
+    name = fields.Str(required=True,
+                      validate=validate.Onef(PLANT_ORDERS))
+
+
+class Subdivision(Schema):
+    """The plant subdivision."""
+
+    name = fields.Str(required=True,
+                      validate=validate.Onef(PLANT_SUBDIVISIONS))
+
+
+class Superdivision(Schema):
+    """The plant subdivision."""
+
+    name = fields.Str(required=True,
+                      validate=validate.Onef(PLANT_SUPERDIVISIONS))
+
+
+class SubKingdom(Schema):
+    """The plant subkingdom."""
+
+    name = fields.Str(required=True,
+                      validate=validate.Onef(PLANT_SUBKINGDOMS))
+
+
+class Kingdom(Schema):
+    """The plant kingdom."""
+
+    name = fields.Str(required=True,
+                      validate=validate.Onef(PLANT_KINGDOMS))
