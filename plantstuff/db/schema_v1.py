@@ -24,27 +24,41 @@ Ways to organize information:
     - genetics
     - etc
 
-
 https://plants.usda.gov/charinfo.html
 """
 
 from collections import namedtuple
 
 from marshmallow import Schema, fields
-
 from marshmallow import validate
-from plantstuff.db import foliage, locales, taxonomy
+
+from plantstuff.db import reproduction, taxonomy
+
+# NOTES:
+# attribution metafields??
+# Making sourcing/attribution/auditing of data really important
+# and upfront (from Andrew)
+
+
+class Tag(Schema):
+    """A plant descriptor tag."""
+
+    name = fields.Str(required=True)
+    description = fields.Str()
 
 
 class Plant(Schema):
     """The most generalized plant object."""
 
     name = fields.Str(required=True)
+    # TODO: better abstraction, e.g. decidous vs. evergreen vs. conifer
+    # also needs to consider weird exceptions like Tamarack.
+    leaf_retention = fields.Bool()
     scientific_name = fields.Str()
     national_common_name = fields.Str()
-    common_aliases = fields.List(fields.Str)
+    common_aliases = fields.List(fields.String)
     foliage_color = fields.Str()
-    base_growth_form = fields.Str(validate=validate.OneOf([
+    base_growth_form = fields.List(fields.Str, validate=validate.OneOf([
         "climbing",
         "columnar",
         "conical",
@@ -56,6 +70,27 @@ class Plant(Schema):
         "rounded",
         "semi-erect",
         "vase",
+    ]))
+    growth_habit = fields.List(fields.Str, required=True,
+                               validate=validate.OneOf([
+                                   "forb/herb",
+                                   "graminoid",
+                                   "lichenous",
+                                   "nonvascular",
+                                   "shrub",
+                                   "subshrub",
+                                   "tree",
+                                   "vine",
+                               ]))
+    growth_habit_condition = fields.List(fields.Str, validate=validate.OneOf([
+        "bunch",
+        "colonizing",
+        "multiple stem",
+        "rhizomatous",
+        "single crown",
+        "single stem",
+        "stoloniferous",
+        "thicket forming",
     ]))
     usda_zone = fields.List(fields.Str, validate=validate.OneOf([
         "1a", "1b",
@@ -73,21 +108,18 @@ class Plant(Schema):
         "13a", "13b",
     ]))
     sunset_zone = fields.List(fields.Str, validate=validate.OneOf([]))
+    lifespan_years = fields.Int()
 
-
-class Tolerance(Schema):
-    """A plant tolerance type."""
-
-    name = fields.Str(required=True)
-    unit = fields.Str(required=True)
-    min_range = fields.Float(required=True)
-    max_range = fields.Float(required=True)
-
-
-class Tag(Schema):
-    """A plant descriptor tag."""
-
-    name = fields.Str(required=True)
+    # ----- many to many or many to many rels --------------------
+    propagation_method = fields.List(
+        fields.Nested(reproduction.PropagationMethod))
+    propagation_factor = fields.List(
+        fields.Nested(reproduction.PropagationFactor))
+    cultivars = fields.List(fields.Nested(taxonomy.Cultivar))
+    tags = fields.List(fields.Nested(Tag, many=True))
+    # TODO: taxonomies
+    kingdom = fields.List(fields.Nested(taxonomy.Kingdom, many=True))
+    subkingdom = fields.List(fields.Nested(taxonomy.SubKingdom, many=True))
 
 
 class Bark(Schema):
@@ -109,90 +141,6 @@ class Bark(Schema):
     thickness = fields.Float()
 
 
-SOIL_PH_TOLERANCE_MAX_RANGE = [
-    "3.5-3.6",
-    "3.7-3.8",
-    "3.9-4",
-    "4.1-4.2",
-    "4.3-4.4",
-    "4.5-4.6",
-    "4.7-4.8",
-    "4.9-5",
-    "5.1-5.2",
-    "5.3-5.4",
-    "5.5-5.6",
-    "5.7-5.8",
-    "5.9-6",
-    "6.1-6.2",
-    "6.3-6.4",
-    "6.5-6.6",
-    "6.7-6.8",
-    "6.9-7",
-    "7.1-7.2",
-    "7.3-7.4",
-    "7.5-7.6",
-    "7.7-7.8",
-    "7.9-8",
-    "8.1-8.2",
-    "8.3-8.4",
-    "8.5-8.6",
-    "8.7-8.8",
-    "8.9-9",
-    "9.1-9.2",
-    "9.3-9.4",
-    "9.5-9.6",
-    "9.7-9.8",
-    "9.9-10",
-    "10.1"
-]
-
-# Precipitation
-PRECIPATION_TOLERANCE_MAX_RANGE = [
-    "10-14",
-    "15-19",
-    "20-24",
-    "25-29",
-    "30-39",
-    "40-49",
-    "50-59",
-    "60-79",
-    "80-99",
-    "100-149",
-    "150-199",
-    ">=200"
-]
-PRECIPATION_TOLERANCE_MIN_RANGE = [
-    "0-4",
-    "5-9",
-    "10-14",
-    "15-19",
-    "20-24",
-    "25-29",
-    "30-39",
-    "40-49",
-    "50-59",
-    ">=60"
-]
-ROOT_DEPTH_MIN_RANGE = [
-    "1-2",
-    "3-5",
-    "6-8",
-    "9-11",
-    "12-14",
-    "15-17",
-    "18-20",
-    "21-23",
-    "24-26",
-    "27-29",
-    "30-32",
-    "33-35",
-    "36-38",
-    "39-41",
-    "42-44",
-    "45-47",
-    "48-51",
-    "52-120",
-]
 # TODO: better classify.
 MISC = {
     "palatable_animl_brs_condition": {
@@ -217,15 +165,6 @@ MISC = {
         "only with plant guides",
         "only without plant guides",
     ],
-    "slin_tolerance_condition": {
-        "type": "string",
-        "anyof": [
-            "none",
-            "low",
-            "medium",
-            "high",
-        ]
-    },
     "family_sym": taxonomy.FAMILY_SYMBOLS,
     "vs_comm_avail": [
         "no known source",
@@ -247,44 +186,6 @@ MISC = {
             "only forma epithet"
         ],
     },
-    "propagation_sprig_ind": {
-        "type": "bool",
-    },
-    "temp_tolerance_min_range": [
-        "-75--53",
-        "-52--48",
-        "-47--43",
-        "-42--38",
-        "-37--33",
-        "-32--28",
-        "-27--23",
-        "-22--18",
-        "-17--13",
-        "-12--8",
-        "-7--3",
-        "-2-2",
-        "3-7",
-        "8-12",
-        "13-17",
-        "18-22",
-        "23-27",
-        "28-32",
-        "33-37",
-        "38-42",
-        "43-47",
-        "48-52",
-        "53-57",
-        "58-62",
-        "63-67",
-        "68-71",
-        "72-75"
-    ],
-    "drght_tolerance_condition": [
-        "none",
-        "low",
-        "medium",
-        "high"
-    ],
     "author_ranks": [
         "only genus author",
         "only species author",
@@ -298,15 +199,6 @@ MISC = {
     },
     "plywd_vnr_suit_ind": {
         "type": "bool",
-    },
-    "frut_seed_abund_condition": {
-        "type": "string",
-        "allof": [
-            "none",
-            "low",
-            "medium",
-            "high"
-        ]
     },
     "foddr_suit_ind": {
         "type": "bool",
@@ -352,12 +244,6 @@ MISC = {
             "without state status"
         ],
     },
-    "propagation_sod_ind": {
-        "type": "bool",
-    },
-    "frut_seed_prst_ind": {
-        "type": "bool",
-    },
     "veg_sprd_rate_condition": {
         "type": "string",
         "anyof": [
@@ -375,17 +261,6 @@ MISC = {
             "high",
         ],
     },
-    "lfspn_condition": {
-        "type": "string",
-        "anyof": [
-            "short",
-            "moderate",
-            "long"
-        ],
-    },
-    "cold_strat_ind": {
-        "type": "bool",
-    },
     "soil_adp_m_txt_ind": {
         "type": "bool",
     },
@@ -401,59 +276,12 @@ MISC = {
     "palatable_human_ind": {
         "type": "bool",
     },
-    "propagation_ctnr_ind": {
-        "type": "bool",
-    },
-    "growth_habit_condition": {
-        "type": "string",
-        "anyof": [
-            "bunch",
-            "colonizing",
-            "multiple stem",
-            "rhizomatous",
-            "single crown",
-            "single stem",
-            "stoloniferous",
-            "thicket forming",
-        ],
-    },
-    "fire_tolerance_condition": {
-        "type": "string",
-        "anyof": [
-            "none",
-            "low",
-            "medium",
-            "high"
-        ],
-    },
     "navl_stor_suit_ind": {
         "type": "bool",
-    },
-    "growth_habit": {
-        "type": "string",
-        "anyof": [
-            "forb/herb",
-            "graminoid",
-            "lichenous",
-            "nonvascular",
-            "shrub",
-            "subshrub",
-            "tree",
-            "vine",
-        ],
     },
     "moist_use_condition": {
         "type": "string",
         "anyof": [
-            "low",
-            "medium",
-            "high"
-        ],
-    },
-    "anerb_tolerance_condition": {
-        "type": "string",
-        "anyof": [
-            "none",
             "low",
             "medium",
             "high"
@@ -640,103 +468,12 @@ MISC = {
             "72000-125000"
         ]
     },
-    "frut_seed_color_condition": [
-        "black",
-        "blue",
-        "brown",
-        "green",
-        "orange",
-        "purple",
-        "red",
-        "white",
-        "yellow"
-    ],
-    "seed_sprd_rate_condition": [
-        "none",
-        "slow",
-        "moderate",
-        "rapid"
-    ],
-    "frut_seed_cspc_ind": {
-        "type": "bool",
-    },
     "fall_cspc_ind": {
         "type": "bool",
     },
-    "frut_seed_end_condition": {
-        "type": "string",
-        "anyof": [
-            "spring",
-            "summer",
-            "fall",
-            "winter",
-            "year-round",
-        ],
-    },
-    "invasive_pubs": [
-        "with invasive status",
-        "--cal-ipc-exotic pest plant list",
-        "--fleppc-invasive plant list",
-        "--hear-information index for selected alien plants in hawaii",
-        "--ky-weeds of kentucky and adjacent states: a field guide",
-        "--n'east-weeds of the northeast",
-        "--ne&gp-weeds of nebraska and the great plains",
-        "--seeppc-invasive exotic pest plants in tennessee",
-        "--state-state noxious weed lists for 35 states",
-        "--swss-weeds of the united states and canada",
-        "--us-federal noxious weed list",
-        "--wi-wisconsin manual of control recommendations for ecologically invasive plants",
-        "--wsws-weeds of the west",
-        "without invasive status",
-    ],
     "plantchar_ind": [
         "only with characteristics data",
         "only without characteristics data",
-    ],
-    "caco3_tolerance_condition": {
-        "type": "string",
-        "anyof": [
-            "none",
-            "low",
-            "medium",
-            "high",
-        ],
-    },
-    "soil_ph_tolerance_min_range": [
-        "3.5-3.6",
-        "3.7-3.8",
-        "3.9-4",
-        "4.1-4.2",
-        "4.3-4.4",
-        "4.5-4.6",
-        "4.7-4.8",
-        "4.9-5",
-        "5.1-5.2",
-        "5.3-5.4",
-        "5.5-5.6",
-        "5.7-5.8",
-        "5.9-6",
-        "6.1-6.2",
-        "6.3-6.4",
-        "6.5-6.6",
-        "6.7-6.8",
-        "6.9-7",
-        "7.1-7.2",
-        "7.3-7.4",
-        "7.5-7.6",
-        "7.7-7.8",
-        "7.9-8",
-        "8.1-8.2",
-        "8.3-8.4",
-        "8.5-8.6",
-        "8.7-8.8",
-        "8.9-9",
-        "9.1-9.2",
-        "9.3-9.4",
-        "9.5-9.6",
-        "9.7-9.8",
-        "9.9-10",
-        "10.1",
     ],
     "height_max_base_age_range": [
         "1-1.9",
@@ -758,14 +495,6 @@ MISC = {
     },
     "rsprt_able_ind": {
         "type": "bool",
-    },
-    "palat_animl_grz_condition": {
-        "type": "string",
-        "anyof": [
-            "low",
-            "medium",
-            "high",
-        ],
     },
     "growth_prd_actv_condition": {
         "type": "string",
@@ -794,186 +523,34 @@ MISC = {
         "moderate",
         "dense",
     ],
-    "frut_seed_start_condition": [
-        "spring",
-        "summer",
-        "fall",
-        "winter",
-        "year-round",
-    ],
-}
-SEED_PER_LB_RANGE = [
-    "10-99999",
-    "100000-199999",
-    "200000-299999",
-    "300000-399999",
-    "400000-499999",
-    "500000-999999",
-    "1000000-1499999",
-    "1500000-9999999",
-    "10000000-19999999",
-    "20000000-29999999",
-    "30000000-39999999",
-    "40000000-49999999"
-]
-GROWTH_TOLERANCES = {
-    "fire": "high",
-    "salinity": "intermediate",
-    "shade": {
-        "type": "string",
-        "anyof": ["intolerant", "intermediate", "tolerant"]
-    },
-    "drought": "low",
-    "frost_free_days_min": {
-        "type": "string",
-        "anyof": [
-            "0-51",
-            "52-66",
-            "67-81",
-            "82-96",
-            "97-111",
-            "112-126",
-            "127-141",
-            "142-156",
-            "157-171",
-            "172-186",
-            "187-201",
-            "202-216",
-            "217-231",
-            "232-246",
-            "247-261",
-            "262-276",
-            "277-291",
-            "292-306",
-            "307-321",
-            "322-336",
-            "337-351",
-            "352-365"
-        ],
-    },
-    "hedge": {
-        "type": "string",
-        "anyof": [
-            "none",
-            "low",
-            "medium",
-            "high",
-        ],
-    },
-    "soil": {
-        "preferred_type": "sandy-loam",
-        "adaptations": {
-            "coarse_texture": {
-                "type": "bool",
-                "default": False,
-                "nullable": True,
-            },
-            "medium_texture": {
-                "type": "bool",
-                "default": False,
-                "nullable": True,
-            },
-            "fine_texture": {
-                "type": "bool",
-                "default": True,
-                "nullable": True,
-            },
-            "anaerobic_tolerance": None,
-            "calcareous_tolerance": None,
-        }
-    },
 }
 
-GROWTH_REQUIREMENTS = {
-    "aspect_hours": {
-        "type": "float",
-        "min": 0.0,
-    },
-    "tolerance": GROWTH_TOLERANCES,
-    "aspect": "sun/half-shade",
-    "moisture_use": "medium",
-    "ph": {
-        "type": "string",
-        "anyof": SOIL_PH_TOLERANCE_MAX_RANGE
-    },
-    "planting_density_per_acre": None,
-    "precipitation": {
-        "min": {
-            "type": "string", "anyof": PRECIPATION_TOLERANCE_MAX_RANGE,
-        },
-        "max": {
-            "type": "string", "anyof": PRECIPATION_TOLERANCE_MIN_RANGE,
-        }
-    },
-    "temperature": {
-        "min": -40,
-        "max": 90
-    },
-    "water_requirements": "mostly_wet",
-    "drainage": "well-drained",
-    "root": {
-        "depth": {
-            "type": "string",
-            "anyof": ROOT_DEPTH_MIN_RANGE,
-        },
-        "primary_type": "taproot",
-    }
-}
-REPRODUCTION = {
-    "commercial_availability": None,
-    "fruit_seed": {
-        "dispersal": {
-            # https://en.wikipedia.org/wiki/
-            #   Biological_dispersal#Types_of_dispersal
-            "type": {
-                "nullable": True,
-                "type": "string",
-                "anyof": [
-                    "density-independent",
-                    "density-dependent",
-                    "breeding",
-                    "natal",
-                ],
-            },
-            "shape": None,
-            "spread_rate": "slow",
-            "range": None,
-            "per_pound": {
-                "type": "string",
-                "anyof": SEED_PER_LB_RANGE,
-            },
-        },
-        "seedling_vigor": {
-            "type": "string",
-            "anyof": [
-                "low",
-                "medium",
-                "high",
-            ],
-        },
-        "small_grain": {
-            "type": "bool",
-            "default": False,
-            "nullable": True,
-        },
-        "color": None,
-        "conspicous": None,
-        "abundance": "low",
-        "period": {
-            "begin": "spring",
-            "end": "fall",
-            "persistence": {
-                "type": "bool",
-                "default": False,
-                "nullable": True,
-            }
-        }
-    }
-}
+FROST_FREE_DAYS_MIN = [
+    "0-51",
+    "52-66",
+    "67-81",
+    "82-96",
+    "97-111",
+    "112-126",
+    "127-141",
+    "142-156",
+    "157-171",
+    "172-186",
+    "187-201",
+    "202-216",
+    "217-231",
+    "232-246",
+    "247-261",
+    "262-276",
+    "277-291",
+    "292-306",
+    "307-321",
+    "322-336",
+    "337-351",
+    "352-365"
+]
+
 MORPHOLOGY_PHYSIOLOGY = {
-    # "bark": ...,
-    "active_growth_period": None,
-    "after_harvest_regrowth_rate": None,
     "bloat": None,
     "c_to_n_ratio": {
         "type": "string",
@@ -985,92 +562,26 @@ MORPHOLOGY_PHYSIOLOGY = {
     },
     "coppice_potential": None,
     "fall_conspicous": None,
-    "fire_resistance": {
-        "type": "bool",
-        "default": False,
-    },
     # "foliage": foliage.FOLIAGE_PHYSIOLOGY,
-    "growth": {
-        "vegetate_spread_rate": {
-            "type": "string",
-            "anyof": [
-                "slow",
-                "moderate",
-                "rapid"
-            ],
-        },
-        "avg_root_depth": "2ft",
-        "avg_spread": "3ft",
-        "avg_landscape_size": "Fast grower to 24 to 36 in.",
-        "avg_per_year": "2ft",
-    },
-    "height": {
-        "avg": "5in",
-        "at_base_max": {
-            "type": "float",
-            "default": 0.0,
-        },
-        "at_maturity_range": {
-            "type": "string",
-            "anyof": [
-                "0-0.9",
-                "1-1.9",
-                "2-2.9",
-                "3-3.9",
-                "4-5.9",
-                "6-9.9",
-                "10-19.9",
-                "20-39.9",
-                "40-59.9",
-                "60-99.9",
-                "100-149.9",
-                "150-199.9",
-                "200-250",
-            ],
-        },
-    },
-    "leaf_retention": {
-        "type": "bool",
-        "nullable": True,
-    },
-    "lifespan": "moderate",
-    "low_growing_grass": None,
     "nitrogen_fixation": None,
     "resprout_ability": None,
-    "shape_and_orientation": None,
 }
 
-
-"""
-RELATIONSHIPS - SCHEMA TBD:
-
-Plant -> hasCultivars -> Cultivar
-Cultivar -> isA -> Plant
-
-"""
 
 # TODO: is this the right approach? Does Marshmallow have an equivalent?
 Relationship = namedtuple('Relationship', 'start, edge_name, end, desc')
 
+rels = [
+    (Plant, 'hasCultivar', taxonomy.Cultivar),
+    (taxonomy.Cultivar, 'isA', Plant),
+]
 RELATIONSHIPS = [
-    Relationship(
-        start=Plant, edge_name='hasCultivar',
-        end=taxonomy.Cultivar,
-        desc=''),
-
-    Relationship(
-        start=taxonomy.Cultivar,
-        edge_name='isA',
-        end=Plant,
-        desc=''),
+    Relationship(start=start, edge_name=edge_name, end=end, desc='')
+    for (start, edge_name, end) in rels
 ]
 
 SCHEMA = {
     "itis_tns": None,
-    "ecology": {
-        "growth_habitat": "forb",
-        "native_status": None
-    },
     # "distribution": DISTRIBUTION,
     "hardwood": {
         "type": "bool",
@@ -1079,6 +590,55 @@ SCHEMA = {
     },
     "hardwood_scale": None,
     "morphology_and_physiology": MORPHOLOGY_PHYSIOLOGY,
-    "reproduction": REPRODUCTION,
-    "growth_requirements": GROWTH_REQUIREMENTS,
+    # "growth_requirements": GROWTH_REQUIREMENTS,
 }
+
+# Testing
+# Testing data ideas using raw json,
+# for marshmallow schema
+data_example = {
+    "name": "clematis",
+    "growth_habit": ["vine", "tree"],
+    "duration": {
+        "type": "perennial"
+    },
+    "tags": [
+        {"name": "foo", "description": None},
+        {"name": "foo", "description": None},
+        {"name": "foo", "description": None},
+    ],
+    "cultivars": [
+        {"name": "foo x 'plant'", "common_name": "...", "description": "..."},
+        {"name": "foo x 'plant'", "common_name": "...", "description": "..."},
+        {"name": "foo x 'plant'", "common_name": "...", "description": "..."},
+        {"name": "foo x 'plant'", "common_name": "...", "description": "..."},
+        {"name": "foo x 'plant'", "common_name": "...", "description": "..."}
+    ],
+    "growth_profile": {
+        "vegetate_spread_rate": "medium"
+    },
+    "propagation_method": [
+        {
+            "name": "vegetative_cutting_greenwood",
+            "recommended_months": [
+                "april", "may", "june", "july", "august"
+            ]
+        },
+        {
+            "name": "vegetative_cutting_softwood",
+            "recommended_months": [
+                "july", "august", "september"
+            ]
+        },
+    ],
+    "propagation_factor": [
+        {"name": "hormone_iba", "value": 100, "units": "ppm"},
+        {"name": "hormone_ppa", "value": 100, "units": "ppm"},
+        {"name": "stratification", "value": None, "units": None},
+    ]
+}
+
+plant_schema = Plant()
+res = plant_schema.load(data_example)
+from pprint import pprint as ppr
+ppr(res.data)

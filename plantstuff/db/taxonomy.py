@@ -1662,14 +1662,14 @@ class Category(Schema):
     """The plant category."""
 
     name = fields.Str(required=True,
-                      validate=validate.Onef(PLANT_CATEGORY))
+                      validate=validate.OneOf(PLANT_CATEGORY))
 
 
 class Class(Schema):
     """The plant class."""
 
     name = fields.Str(required=True,
-                      validate=validate.Onef(PLANT_CLASSES))
+                      validate=validate.OneOf(PLANT_CLASSES))
 
 
 class Cultivar(Schema):
@@ -1687,53 +1687,53 @@ class Division(Schema):
     """The plant division."""
 
     name = fields.Str(required=True,
-                      validate=validate.Onef(PLANT_DIVISIONS))
+                      validate=validate.OneOf(PLANT_DIVISIONS))
 
 
 class Family(Schema):
     """The plant family."""
 
     name = fields.Str(required=True,
-                      validate=validate.Onef(PLANT_COMMON_FAMILY_NAMES))
+                      validate=validate.OneOf(PLANT_COMMON_FAMILY_NAMES))
 
 
 class Genus(Schema):
     """The plant genus."""
 
     name = fields.Str(required=True,
-                      validate=validate.Onef(PLANT_GENUSES))
+                      validate=validate.OneOf(PLANT_GENUSES))
 
 
 class Order(Schema):
     """The plant order."""
 
     name = fields.Str(required=True,
-                      validate=validate.Onef(PLANT_ORDERS))
+                      validate=validate.OneOf(PLANT_ORDERS))
 
 
 class Subdivision(Schema):
     """The plant subdivision."""
 
     name = fields.Str(required=True,
-                      validate=validate.Onef(PLANT_SUBDIVISIONS))
+                      validate=validate.OneOf(PLANT_SUBDIVISIONS))
 
 
 class Superdivision(Schema):
     """The plant subdivision."""
 
     name = fields.Str(required=True,
-                      validate=validate.Onef(PLANT_SUPERDIVISIONS))
+                      validate=validate.OneOf(PLANT_SUPERDIVISIONS))
 
 
 class SubKingdom(Schema):
     """The plant subkingdom."""
 
     name = fields.Str(required=True,
-                      validate=validate.Onef(PLANT_SUBKINGDOMS))
+                      validate=validate.OneOf(PLANT_SUBKINGDOMS))
 
 
 class Kingdom(Schema):
     """The plant kingdom."""
 
     name = fields.Str(required=True,
-                      validate=validate.Onef(PLANT_KINGDOMS))
+                      validate=validate.OneOf(PLANT_KINGDOMS))

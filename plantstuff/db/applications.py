@@ -14,6 +14,7 @@ class Application(Schema):
         "naval_store_product",
         "nursery_stock_product",
         "palatable_browse_animal",
+        "palatable_animal_grazing",
         "post_product",
         "pulpwood_product",
         "veneer_product",

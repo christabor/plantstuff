@@ -40,7 +40,7 @@ class BusinessRegulationConcern(Schema):
 
 
 class USNoxiousStatus(Schema):
-    """Federal noxious plant concerns."""
+    """Noxious plant concerns."""
 
     federal_status = fields.Str(
         required=True,
@@ -105,6 +105,29 @@ class USNoxiousStatus(Schema):
         ]),
     )
 
+
+class USInvasiveStatus(Schema):
+    """Invasive plant concerns."""
+
+    federal_status = fields.Str(
+        required=True,
+        validate=validate.OneOf([
+            "with invasive status",
+            "--cal-ipc-exotic pest plant list",
+            "--fleppc-invasive plant list",
+            "--hear-information index for selected alien plants in hawaii",
+            "--ky-weeds of kentucky and adjacent states: a field guide",
+            "--n'east-weeds of the northeast",
+            "--ne&gp-weeds of nebraska and the great plains",
+            "--seeppc-invasive exotic pest plants in tennessee",
+            "--state-state noxious weed lists for 35 states",
+            "--swss-weeds of the united states and canada",
+            "--us-federal noxious weed list",
+            "--wi-wisconsin manual of control recommendations for ecologically invasive plants",
+            "--wsws-weeds of the west",
+            "without invasive status",
+        ]),
+    )
 
 # TODO: add
 # "us_state_noxious_status",
