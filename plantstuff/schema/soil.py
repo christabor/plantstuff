@@ -24,3 +24,4 @@ class SoilType(Model):
     name = StringType(choices=SOIL_TYPES)
     description = StringType()
     preferred = BooleanType()
+    drainage = StringType(choices=['poor', 'moderate', 'excellent'])

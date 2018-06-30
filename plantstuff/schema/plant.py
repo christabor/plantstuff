@@ -44,6 +44,8 @@ from plantstuff.schema import (
     bark,
     foliage,
     flower,
+    light,
+    growth,
     root,
     seed,
     soil,
@@ -104,6 +106,7 @@ class TaxonomicRank(Model):
     order = ListType(ModelType(taxonomy.Order))
     genus = ListType(ModelType(taxonomy.Genus))
     family = ListType(ModelType(taxonomy.Family))
+    family_symbols = ListType(StringType(choices=taxonomy.FAMILY_SYMBOLS))
     class_rank = ListType(ModelType(taxonomy.Class))
     category = ListType(ModelType(taxonomy.Category))
 
@@ -125,10 +128,13 @@ class Plant(Model):
         "erect",
         "irregular",
         "oval",
+        "open",
         "prostrate",
+        "pyramidal",
         "rounded",
         "semi-erect",
         "vase",
+        "weeping",
     ]))
     growth_habit = ListType(
         StringType(choices=[
@@ -179,6 +185,7 @@ class Plant(Model):
 
     # Broad, common categories with complex sub-relationships.
     hierarchy = ModelType(TaxonomicRank)
+
     bark = ModelType(bark.Bark)
     flower = ModelType(flower.Flower)
     root = ModelType(root.Root)
@@ -217,8 +224,11 @@ class Plant(Model):
     #     "nullable": True,
     # },
     # "hardwood_scale": None,
-    # "morphology_and_physiology": MORPHOLOGY_PHYSIOLOGY,
-    # "growth_requirements": GROWTH_REQUIREMENTS,
+
+    growth = ModelType(growth.GrowthProfile)
+    light_aspect = ModelType(light.LightAspect)
+    # water_aspect = ModelType(GrowthAspect)
+
     # MORPHOLOGY_PHYSIOLOGY = {
     #     "bloat": None,
     #     "c_to_n_ratio": {
@@ -229,8 +239,6 @@ class Plant(Model):
     #             "high",
     #         ]
     #     },
-    #     "coppice_potential": None,
-    #     "fall_conspicous": None,
     #     # "foliage": foliage.FOLIAGE_PHYSIOLOGY,
     #     "nitrogen_fixation": None,
     #     "resprout_ability": None,
@@ -247,10 +255,6 @@ MISC = {
             "high",
         ],
     },
-    "synonyms": [
-        "accepted names and synonyms",
-        "accepted names only",
-    ],
     "soil_adp_c_txt_ind": {
         "type": "BooleanType",
     },
@@ -261,7 +265,6 @@ MISC = {
         "only with plant guides",
         "only without plant guides",
     ],
-    "family_sym": taxonomy.FAMILY_SYMBOLS,
     "vs_comm_avail": [
         "no known source",
         "routinely available",
@@ -282,14 +285,6 @@ MISC = {
             "only forma epithet"
         ],
     },
-    "author_ranks": [
-        "only genus author",
-        "only species author",
-        "only subspecies author",
-        "only variety author",
-        "only subvariety author",
-        "only forma author"
-    ],
     "flwr_cspc_ind": {
         "type": "BooleanType",
     },
@@ -383,10 +378,6 @@ MISC = {
             "high"
         ],
     },
-    "family": {
-        "type": "string",
-        "anyof": taxonomy.FAMILY,
-    },
     "folg_txt_condition": {
         "type": "string",
         "anyof": [
@@ -404,10 +395,6 @@ MISC = {
     "soil_adp_f_txt_ind": {
         "type": "BooleanType",
     },
-    "plantfact_ind": [
-        "only with fact sheets",
-        "only without fact sheets",
-    ],
     "grass_low_grw_ind": {
         "type": "BooleanType",
     },
@@ -424,7 +411,7 @@ MISC = {
         "--virgin islands",
         "not in plants floristic area"
     ],
-    "coppice_pot_ind": [
+    "coppice_potential_indicator": [
         "yes",
         "no"
     ],
@@ -551,7 +538,7 @@ MISC = {
             "72000-125000"
         ]
     },
-    "fall_cspc_ind": {
+    "fall_conspicous_indicator": {
         "type": "BooleanType",
     },
     "height_max_base_age_range": [
@@ -575,56 +562,14 @@ MISC = {
     "rsprt_able_ind": {
         "type": "BooleanType",
     },
-    "growth_prd_actv_condition": {
-        "type": "string",
-        "allof": [
-            "spring",
-            "spring and fall",
-            "spring and summer",
-            "spring, summer, fall",
-            "summer",
-            "summer and fall",
-            "fall, winter and spring",
-            "year-round",
-        ],
-    },
-    "propagation_cut_ind": [
-        "yes",
-        "no",
-    ],
-    "folg_prsty_wntr_condition": [
+    "foliage_porosity_wntr_condition": [
         "porous",
         "moderate",
         "dense",
     ],
-    "folg_prsty_sumr_condition": [
+    "foliage_porosity_sumr_condition": [
         "porous",
         "moderate",
         "dense",
     ],
 }
-
-FROST_FREE_DAYS_MIN = [
-    "0-51",
-    "52-66",
-    "67-81",
-    "82-96",
-    "97-111",
-    "112-126",
-    "127-141",
-    "142-156",
-    "157-171",
-    "172-186",
-    "187-201",
-    "202-216",
-    "217-231",
-    "232-246",
-    "247-261",
-    "262-276",
-    "277-291",
-    "292-306",
-    "307-321",
-    "322-336",
-    "337-351",
-    "352-365"
-]

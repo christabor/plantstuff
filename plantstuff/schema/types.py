@@ -6,6 +6,7 @@ from schematics.types import (
     FloatType as BaseFloatType,
     BooleanType as BaseBooleanType,
     ModelType as BaseModelType,
+    IntType as BaseIntType,
 )
 
 
@@ -32,4 +33,8 @@ class ModelType(BaseType, BaseModelType):
 
 
 class ListType(BaseType, BaseListType):
+    """A wrapper subclass."""
+
+
+class IntType(BaseType, BaseIntType):
     """A wrapper subclass."""

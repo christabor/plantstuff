@@ -1,78 +1,43 @@
 """Foliage categories."""
 from schematics.models import Model
 
+from plantstuff.schema import common
 from plantstuff.schema.types import (
+    FloatType,
     StringType,
+    IntType,
+    ListType,
 )
 
 
 class GrowthProfile(Model):
-    """Growth profile for a plant."""
+    """An overall growth profile."""
 
-    vegetate_spread_rate = StringType(choices=[
+    # active_growth_period
+    # after_harvest_regrowth_rate
+    avg_spread_foot = FloatType()
+    avg_spread_foot = FloatType()
+    avg_per_year_foot = FloatType()
+    avg_mature_height_foot = FloatType()
+    avg_height_at_base_max_foot = FloatType()
+    avg_height_at_maturity_max_foot = FloatType()
+
+    vegetative_spread_rate = StringType(choices=[
         "slow",
         "moderate",
         "rapid",
     ])
 
-
-class GrowthCharacteristic(Model):
-    """A growth characteristic that is not isolated to one specific area."""
-
-    # active_growth_period
-    # after_harvest_regrowth_rate
-    # "avg_root_depth": "2ft",
-    # "avg_spread": "3ft",
-    # "avg_landscape_size": "Fast grower to 24 to 36 in.",
-    # "avg_per_year": "2ft",
-
-    # "height": {
-    #     "avg": "5in",
-    #     "at_base_max": {
-    #         "type": "float",
-    #         "default": 0.0,
-    #     },
-    #     "at_maturity_range": {
-    #         "type": "string",
-    #         "anyof": [
-    #             "0-0.9",
-    #             "1-1.9",
-    #             "2-2.9",
-    #             "3-3.9",
-    #             "4-5.9",
-    #             "6-9.9",
-    #             "10-19.9",
-    #             "20-39.9",
-    #             "40-59.9",
-    #             "60-99.9",
-    #             "100-149.9",
-    #             "150-199.9",
-    #             "200-250",
-    #         ],
-    #     },
+    min_frost_free_days = IntType()
+    # "seedling_vigor": {
+    # "anyof": [
+    #     "low",
+    #     "medium",
+    #     "high",
+    # ],
     # },
-    # GROWTH_REQUIREMENTS = {
-    #     "aspect_hours": {
-    #         "type": "float",
-    #         "min": 0.0,
-    #     },
-    #     "aspect": "sun/half-shade",
-    #     "moisture_use": "medium", "planting_density_per_acre
-    #     "seedling_vigor": {
-    #         "type": "string",
-    #         "anyof": [
-    #             "low",
-    #             "medium",
-    #             "high",
-    #         ],
-    #     },
-    #     "water_requirements": "mostly_wet",
-    #     "drainage": "well-drained",
-    #     "root": {
-    #         "depth": {
-    #             "type": "string",
-    #             "anyof": ROOT_DEPTH_MIN_RANGE,
-    #         },
-    #         "primary_type": "taproot",
-    #     }
-    # }
+    # "water_requirements": "mostly_wet",
+
+    growth_period_active_condition = ListType(StringType(
+        choices=common.PLANT_SEASONS,
+    ))

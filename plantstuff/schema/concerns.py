@@ -37,6 +37,7 @@ class RegulationConcern(Model):
         "copyrighted",
         "gmo",
         "patented",
+        "restricted",
     ]))
 
 
