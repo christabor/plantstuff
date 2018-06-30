@@ -4,13 +4,19 @@ from plantstuff.schema.plant import Plant
 
 
 data_example = {
-    "name": "clematis",
-    "growth_habit": ["vine", "tree"],
+    "name": "african daisy",
+    "scientific_name": "gazania krebsiana",
+    "growth_habit": ["subshrub"],
+    "growth_habit_condition": ["bunch"],
     "duration": [
         {"type": "perennial"},
     ],
+    "light": [
+        {"aspect": "moderate-sun"},
+        {"aspect": "full-sun"},
+    ],
     "foliage": {
-        "retention": "deciduous",
+        "retention": "herbaceous",
         "phases": [
             {
                 "anatomy": ["ovate", "linear"],
@@ -33,8 +39,11 @@ data_example = {
         ]
     },
     "hierarchy": {
-        "kingdom": {"name": "plantae"},
-        "subkingdom": [{"name": "tracheobionta"}]
+        "kingdom": "plantae",
+        "subkingdom": "tracheobionta",
+        "order": "asterales",
+        "family": "asteraceae",
+        "genus": "aster",
     },
     "root": {
         "avg_depth_inches": 1.23,
@@ -57,15 +66,18 @@ data_example = {
         {"name": "stratification", "value": None, "units": None},
     ],
     "cultivars": [
-        {"name": "foo x 'plant'", "common_name": "...", "description": "..."},
-        {"name": "foo x 'plant'", "common_name": "...", "description": "..."},
-        {"name": "foo x 'plant'", "common_name": "...", "description": "..."},
-        {"name": "foo x 'plant'", "common_name": "...", "description": "..."},
-        {"name": "foo x 'plant'", "common_name": "...", "description": "..."}
+        "Hantamberg Orange",
     ],
     # "growth_profile": {
     #     "vegetate_spread_rate": "medium"
     # },
+    "companions": [
+        "festuca glauca",
+        "salvia",
+        "sedum",
+        "rudbeckia",
+        "gaillardia",
+    ],
     "propagation_methods": [
         {
             "name": "vegetative_cutting_greenwood",

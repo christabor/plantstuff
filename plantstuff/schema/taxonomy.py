@@ -3,10 +3,12 @@ from schematics.models import Model
 
 from plantstuff.schema.types import (
     StringType,
+    ListType,
 )
 
 
 PLANT_CATEGORY = [
+    "angiosperm",
     "dicot",
     "fern",
     "green alga",
@@ -1660,71 +1662,19 @@ FAMILY = [
 ]
 
 
-class Category(Model):
-    """The plant category."""
+class TaxonomicRank(Model):
+    """The grouping of all taxonomic ranks."""
 
-    name = StringType(choices=PLANT_CATEGORY, required=True)
+    kingdom = StringType(choices=PLANT_KINGDOMS,
+                         required=True, default='plantae')
+    subkingdom = StringType(choices=PLANT_SUBKINGDOMS)
+    superdivision = StringType(choices=PLANT_SUPERDIVISIONS)
+    subdivision = StringType(choices=PLANT_SUBDIVISIONS)
+    division = StringType(choices=PLANT_DIVISIONS)
+    order = StringType(choices=PLANT_ORDERS)
 
-
-class Class(Model):
-    """The plant class."""
-
-    name = StringType(choices=PLANT_CLASSES, required=True)
-
-
-class Cultivar(Model):
-    """The plant cultivar."""
-
-    name = StringType(required=True)
-    common_name = StringType(required=True)
-    description = StringType()
-    # Maybe?
-    # flower_colors = fields.List(StringType)
-
-
-class Division(Model):
-    """The plant division."""
-
-    name = StringType(choices=PLANT_DIVISIONS, required=True)
-
-
-class Family(Model):
-    """The plant family."""
-
-    name = StringType(choices=PLANT_COMMON_FAMILY_NAMES, required=True)
-
-
-class Genus(Model):
-    """The plant genus."""
-
-    name = StringType(choices=PLANT_GENUSES, required=True)
-
-
-class Order(Model):
-    """The plant order."""
-
-    name = StringType(choices=PLANT_ORDERS, required=True)
-
-
-class Subdivision(Model):
-    """The plant subdivision."""
-
-    name = StringType(choices=PLANT_SUBDIVISIONS, required=True)
-
-
-class Superdivision(Model):
-    """The plant subdivision."""
-
-    name = StringType(choices=PLANT_SUPERDIVISIONS, required=True)
-
-
-class SubKingdom(Model):
-    """The plant subkingdom."""
-
-    name = StringType(choices=PLANT_SUBKINGDOMS, required=True)
-
-
-class Kingdom(Model):
-    """The plant kingdom."""
-
-    name = StringType(choices=PLANT_KINGDOMS, required=True)
+    class_rank = StringType(choices=PLANT_CLASSES)
+    category = ListType(StringType(choices=PLANT_CATEGORY))
+    family = StringType(choices=FAMILY)
+    family_symbols = StringType(choices=FAMILY_SYMBOLS)
+    genus = StringType()

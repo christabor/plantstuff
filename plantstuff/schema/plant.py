@@ -49,6 +49,7 @@ from plantstuff.schema import (
     root,
     seed,
     soil,
+    stem,
     tolerance,
 )
 
@@ -95,32 +96,14 @@ clematis.cultivars = [
 """
 
 
-class TaxonomicRank(Model):
-    """The grouping of all taxonomic ranks."""
-
-    kingdom = ModelType(taxonomy.Kingdom)
-    subkingdom = ListType(ModelType(taxonomy.SubKingdom))
-    superdivision = ListType(ModelType(taxonomy.Superdivision))
-    subdivision = ListType(ModelType(taxonomy.Subdivision))
-    division = ListType(ModelType(taxonomy.Division))
-    order = ListType(ModelType(taxonomy.Order))
-    genus = ListType(ModelType(taxonomy.Genus))
-    family = ListType(ModelType(taxonomy.Family))
-    family_symbols = ListType(StringType(choices=taxonomy.FAMILY_SYMBOLS))
-    class_rank = ListType(ModelType(taxonomy.Class))
-    category = ListType(ModelType(taxonomy.Category))
-
-
 class Plant(Model):
     """The most generalized plant object."""
 
     name = StringType(required=True)
-
     scientific_name = StringType()
     national_common_name = StringType()
     common_aliases = ListType(StringType())
-    foliage_color = StringType()
-    base_growth_form = ListType(StringType(choices=[
+    growth_form = ListType(StringType(choices=[
         "climbing",
         "columnar",
         "conical",
@@ -147,7 +130,8 @@ class Plant(Model):
             "tree",
             "vine",
         ]),
-        required=True)
+        required=True,
+    )
     growth_habit_condition = ListType(StringType(choices=[
         "bunch",
         "colonizing",
@@ -179,12 +163,12 @@ class Plant(Model):
     # ----- many to many or many to many rels --------------------
     propagation_methods = ListType(ModelType(reproduction.PropagationMethod))
     propagation_factors = ListType(ModelType(reproduction.PropagationFactor))
-    cultivars = ListType(ModelType(taxonomy.Cultivar))
+    cultivars = ListType(StringType)
     tags = ListType(StringType(validators=[validators.one_word]))
     duration = ListType(ModelType(lifespan.Duration))
 
     # Broad, common categories with complex sub-relationships.
-    hierarchy = ModelType(TaxonomicRank)
+    hierarchy = ModelType(taxonomy.TaxonomicRank)
 
     bark = ModelType(bark.Bark)
     flower = ModelType(flower.Flower)
@@ -193,6 +177,10 @@ class Plant(Model):
 
     soil = ListType(ModelType(soil.SoilType))
     seed = ListType(ModelType(seed.Seed))
+    stem = ModelType(stem.Stem)
+
+    # TODO: how to approach this
+    companions = ListType(StringType())
 
     regulation_concerns = ListType(ModelType(concerns.RegulationConcern))
     biological_concerns = ListType(ModelType(concerns.BiologicalConcern))
@@ -226,7 +214,7 @@ class Plant(Model):
     # "hardwood_scale": None,
 
     growth = ModelType(growth.GrowthProfile)
-    light_aspect = ModelType(light.LightAspect)
+    light = ListType(ModelType(light.Light))
     # water_aspect = ModelType(GrowthAspect)
 
     # MORPHOLOGY_PHYSIOLOGY = {

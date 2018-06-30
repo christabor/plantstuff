@@ -87,10 +87,11 @@ class Foliage(Model):
     retention = StringType(
         choices=[
             "brevideciduous",
+            "broadleaf-evergreen",
             "deciduous",
             "evergreen",
-            "broadleaf-evergreen",
-            "marcescence"
+            "herbaceous",
+            "marcescence",
         ],
     )
     phases = ListType(ModelType(FoliagePhase))

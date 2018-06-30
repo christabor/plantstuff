@@ -15,7 +15,7 @@ LIGHT_ASPECTS = [
 ]
 
 
-class LightAspect(Model):
+class Light(Model):
     """A general class for photosynthetic light requirements."""
 
     aspect = StringType(choices=LIGHT_ASPECTS)
