@@ -8,6 +8,26 @@ from functools import wraps
 from pyquery import PyQuery as Pq
 
 
+def to_json(directory=None):
+    """Convert ret-val to json. Always overwrite.."""
+    def outer(func):
+        @wraps(func)
+        def inner(*args, **kwargs):
+            url = args[0] if len(args) > 0 else ''
+            fname = func.__name__ + '_'.join(url)
+            hash = hashlib.md5(fname).hexdigest()
+            fname = 'cached_{}_{}.json'.format(func.__name__, hash)
+            fpath = fname
+            if directory is not None:
+                fpath = '{}/{}'.format(directory, fname)
+            data = func(*args)
+            with open(fpath, 'w') as jsondata:
+                jsondata.write(json.dumps(data, indent=4))
+            return data
+        return inner
+    return outer
+
+
 def cache_json(directory=None):
     """Cache dict/list data as a json file."""
     def outer(func):

@@ -3,7 +3,7 @@
 import json
 import subprocess
 
-from plantstuff.core.cache import cache_json
+from plantstuff.core.decorators import to_json
 
 DATA_SOURCES = [
     'daves',
@@ -49,14 +49,14 @@ def search_all_json(dossier, token):
     return dossier
 
 
-@cache_json()
+@to_json()
 def search_all_json_by_name(plant_name):
     """Try to build a set of info from all known sources of json data."""
     dossier = {'given': plant_name.lower()}
     return search_all_json(dossier, '{}'.format(plant_name))
 
 
-@cache_json()
+@to_json()
 def search_all_json_by_code(code):
     """Try to build a set of info from all known sources of json data."""
     dossier = {'given': code}

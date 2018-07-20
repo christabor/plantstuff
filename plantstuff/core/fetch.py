@@ -1,8 +1,9 @@
 """Data fetching."""
-from pyquery import PyQuery as Pq
 import requests
 
-from plantstuff.core.cache import cache_html
+from pyquery import PyQuery as Pq
+
+from plantstuff.core.decorators import cache_html
 
 
 def get_dom(directory=None):
