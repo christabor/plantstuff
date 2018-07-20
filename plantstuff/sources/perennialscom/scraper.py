@@ -1,13 +1,13 @@
 import requests
 
 from plantstuff.core import conf, fetch
-from plantstuff.core.cache import cache_json
+from plantstuff.core.decorators import to_json
 
 URL = 'http://www.perennials.com/plants/{plant}.html'
 
 get_dom = fetch.get_dom(directory='../../data/perennialscom')
 
-# @cache_json(directory='../../data/perennialscom')
+# @to_json(directory='../../data/perennialscom')
 # def get_count_of_pages():
 #     """Figure out how many pages are available for each letter."""
 #     res = {}
@@ -22,7 +22,7 @@ get_dom = fetch.get_dom(directory='../../data/perennialscom')
 #     return res
 
 
-# # @cache_json(directory='../../data/perennialscom')
+# # @to_json(directory='../../data/perennialscom')
 # def guess_plant():
 #     """Download api data by plant symbol for ALL plants."""
 #     per_page = 96

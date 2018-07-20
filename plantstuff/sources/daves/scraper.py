@@ -1,6 +1,6 @@
 """Daves garden scrapers."""
 from plantstuff.core import fetch
-from plantstuff.core.cache import cache_json
+from plantstuff.core.decorators import to_json
 
 LETTERS = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'.split()
 DAVES_URL = 'http://davesgarden.com/guides/pf/go/{plant_id}/'
@@ -11,7 +11,7 @@ DAVES_URL_BY_SPECIES = (
 get_dom = fetch.get_dom(directory='../../data/daves')
 
 
-@cache_json(directory='../../data/daves')
+@to_json(directory='../../data/daves')
 def get_all_species_links_on_page(url):
     """Get all the species list on the main page."""
     data, dom = get_dom(url)
@@ -27,7 +27,7 @@ def get_all_species_links_on_page(url):
     return links
 
 
-@cache_json(directory='../../data/daves')
+@to_json(directory='../../data/daves')
 def get_all_species_links_on_page_all_pages():
     """Get all species links on all pages (paginated)."""
     # This is hard-coded on their site, for now.
@@ -46,7 +46,7 @@ def get_all_species_links_on_page_all_pages():
     return data
 
 
-@cache_json(directory='../../data/daves')
+@to_json(directory='../../data/daves')
 def get_real_plant_profile_link(name, ref_url):
     """Get the real profile link.
 
@@ -59,7 +59,7 @@ def get_real_plant_profile_link(name, ref_url):
     return {'ref': ref_url, 'real_url': url, 'name': name}
 
 
-@cache_json(directory='../../data/daves')
+@to_json(directory='../../data/daves')
 def get_all_plant_profile_links():
     """Get the real profile links.
 

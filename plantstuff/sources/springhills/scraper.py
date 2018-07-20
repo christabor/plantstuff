@@ -2,7 +2,7 @@
 
 from plantstuff.core import fetch
 from plantstuff.core import normalize
-from plantstuff.core.cache import cache_json
+from plantstuff.core.decorators import to_json
 
 # 'a' is for all, not an alphabetical letter
 URL = 'https://www.springhillnursery.com/category/{section}/a'
@@ -20,7 +20,7 @@ ALL_SECTIONS = [
 get_dom = fetch.get_dom(directory='../../data/springhills')
 
 
-@cache_json(directory='../../data/springhills')
+@to_json(directory='../../data/springhills')
 def get_all_detail_links_for_all_categories():
     """Get all available links for each category.."""
     links = {}
@@ -29,7 +29,7 @@ def get_all_detail_links_for_all_categories():
     return links
 
 
-@cache_json(directory='../../data/springhills')
+@to_json(directory='../../data/springhills')
 def get_detail_links_for_category(section):
     """Get all available links for a category.."""
     url = URL.format(section=section)
@@ -48,7 +48,7 @@ def get_detail_links_for_category(section):
     return links
 
 
-@cache_json(directory='../../data/springhills')
+@to_json(directory='../../data/springhills')
 def get_plant_details(url):
     """Get details of a plant."""
     _, dom = get_dom(url)
@@ -63,14 +63,19 @@ def get_plant_details(url):
                 title, val = item.text_content().split(':')
             except ValueError:
                 continue
-            title = normalize.clean(title)
-            items[title] = normalize.clean(val)
+            title = normalize.clean_key(title)
+            if 'restricted' in title:
+                items[title] = [
+                    l.upper() for l in normalize.clean(val).split(' ')
+                ]
+            else:
+                items[title] = normalize.clean(val)
     _get_list(items, list_a)
     _get_list(items, list_b)
     return items
 
 
-@cache_json(directory='../../data/springhills')
+@to_json(directory='../../data/springhills')
 def get_all_plant_details():
     """Get details of ALL plants."""
     details = []

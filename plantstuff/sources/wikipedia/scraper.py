@@ -1,6 +1,6 @@
 """Scraper for university of connecticut horticulture page."""
 from plantstuff.core import fetch
-from plantstuff.core.cache import cache_json, cached
+from plantstuff.core.decorators import to_json, cached
 
 
 get_dom = fetch.get_dom(directory='../../data/wikipedia')
@@ -76,7 +76,7 @@ def get_plants_for_species(item):
     return get()
 
 
-@cache_json(directory='../../data/wikipedia')
+@to_json(directory='../../data/wikipedia')
 def get_all_plant_species_lists():
     """Get ALL the lists of plants by species for all species."""
     data = []
@@ -88,7 +88,7 @@ def get_all_plant_species_lists():
     return data
 
 
-@cache_json(directory='../../data/wikipedia')
+@to_json(directory='../../data/wikipedia')
 def get_all_garden_plants_lists():
     """Get ALL the lists of plants by species for all species."""
     data = []

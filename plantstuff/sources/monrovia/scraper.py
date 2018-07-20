@@ -8,7 +8,7 @@ import os
 from collections import defaultdict
 
 from plantstuff.core import conf, fetch
-from plantstuff.core.cache import cache_json
+from plantstuff.core.decorators import to_json
 
 MONROVIA_URL = 'http://www.monrovia.com/plant-catalog/plants/{plant_info}'
 
@@ -36,7 +36,7 @@ def get_all_letter_search_results_monrovia():
             get_letter_search_results_monrovia(letter, page)
 
 
-@cache_json
+@to_json
 def get_plants_grid_urls_letter_results_monrovia(letter, start):
     """Return the grid of plant urls."""
     url_base = 'http://www.monrovia.com/plant-catalog/plants/'
@@ -56,7 +56,7 @@ def get_plants_grid_urls_letter_results_monrovia(letter, start):
     return urls
 
 
-@cache_json
+@to_json
 def get_plants_grid_all_letters_results_monrovia():
     """Return the grid of plant urls."""
     all_data = defaultdict(list)
@@ -67,7 +67,7 @@ def get_plants_grid_all_letters_results_monrovia():
     return all_data
 
 
-@cache_json
+@to_json
 def get_monrovia_info(info):
     """Get plant info."""
     url = MONROVIA_URL.format(plant_info=info)
@@ -111,7 +111,7 @@ def load_monrovia_data():
     return data
 
 
-@cache_json()
+@to_json()
 def get_companion_plant_monrovia():
     """Get all companion plant references and the plants they correspond to."""
     relationships = []
@@ -134,7 +134,7 @@ def get_companion_plant_monrovia():
     return relationships
 
 
-@cache_json
+@to_json
 def get_all_plants_from_all_letters_all_pages_n_monrovia():
     """Get all plant details.
 
@@ -157,7 +157,7 @@ if __name__ == '__main__':
     # get_monrovia_info('1143/golden-euonymus/')
     # get_monrovia_info('5159/ivory-silk-japanese-tree-lilac/')
     # get_monrovia_info('335/goldmound-spirea/')
-    # get_all_letter_search_results_monrovia()
+    get_all_letter_search_results_monrovia()
     # get_companion_plant_monrovia()
     # make_companion_plant_graph()
     get_all_plants_from_all_letters_all_pages_n_monrovia()

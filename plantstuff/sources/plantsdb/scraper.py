@@ -5,7 +5,7 @@ from collections import defaultdict
 import requests
 
 from plantstuff.core import fetch
-from plantstuff.core.cache import cache_json
+from plantstuff.core.decorators import to_json
 
 API_URL = 'https://plantsdb.xyz/search?symbol={symbol}'
 USDA_PLANTLIST_URL = (
@@ -15,7 +15,7 @@ USDA_PLANTLIST_URL = (
 get_dom = fetch.get_dom(directory='../../data/plantsdb')
 
 
-@cache_json(directory='../../data/plantsdb')
+@to_json(directory='../../data/plantsdb')
 def get_usda_options():
     """Download all the options from USDA advanced form."""
     url = 'https://plants.usda.gov/adv_search.html'
@@ -31,7 +31,7 @@ def get_usda_options():
     return data
 
 
-@cache_json(directory='../../data/plantsdb')
+@to_json(directory='../../data/plantsdb')
 def get_all_data_from_usda_plants():
     """Download all the symbol/plant data."""
     raw = requests.get(USDA_PLANTLIST_URL).content.split('\n')
@@ -55,7 +55,7 @@ def get_all_data_from_usda_plants():
     return data
 
 
-@cache_json(directory='../../data/plantsdb')
+@to_json(directory='../../data/plantsdb')
 def get_data_by_symbol(symbol):
     """Download api data by plant symbol."""
     res = requests.get(API_URL.format(symbol=symbol))
@@ -63,7 +63,7 @@ def get_data_by_symbol(symbol):
         return res.json()
 
 
-@cache_json(directory='../../data/plantsdb')
+@to_json(directory='../../data/plantsdb')
 def get_all_data_by_symbol():
     """Download api data by plant symbol for ALL plants."""
     refdata = get_all_data_from_usda_plants()

@@ -58,6 +58,18 @@ data_example = {
         "type": ["scaly", "papery"]
     },
     "flower": {
+        "color": ["yellow", "orange", "red"],
+        "bloom_period": [
+            "late-spring", "summer", "early-summer",
+            "mid-summer", "late-summer",
+        ],
+        "pollination_methods": [
+            {
+                "attraction_method": "nectar",
+                "attraction_speciality": ["..."],
+                "mechanism": "entomophilous",
+            }
+        ]
     },
     "tags": ['scented', 'interesting', 'colorful', 'trumpet'],
     "propagation_factors": [

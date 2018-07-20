@@ -1,6 +1,6 @@
 """Scraper for university of connecticut horticulture page."""
 from plantstuff.core import fetch
-from plantstuff.core.cache import cache_json
+from plantstuff.core.decorators import to_json
 
 URL = 'http://hort.uconn.edu'
 
@@ -15,7 +15,7 @@ def clean(text):
     return text.replace('\n', '').replace('\r', '').strip()
 
 
-@cache_json(directory='../../data/uconn')
+@to_json(directory='../../data/uconn')
 def get_all_plant_profile_links():
     """Get the plant name and their detail page links."""
     content, dom = get_dom(URL + '/list.php')
@@ -34,7 +34,7 @@ def get_all_plant_profile_links():
     return data
 
 
-@cache_json(directory='../../data/uconn')
+@to_json(directory='../../data/uconn')
 def get_plant_details(url):
     """Get the plant details."""
     content, dom = get_dom(url)
@@ -60,7 +60,7 @@ def get_plant_details(url):
     return data
 
 
-@cache_json(directory='../../data/uconn')
+@to_json(directory='../../data/uconn')
 def get_all_plant_profile_details():
     """Get ALL the plant details."""
     data = []
