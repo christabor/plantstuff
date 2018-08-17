@@ -6,9 +6,13 @@ These are the default static values for a plant. This document is not intended t
 
 ## Temporal plant characteristics
 
-There is a need to capture the dynamic nature of plants in a way that is queryable and structured.
+There is a need to capture the dynamic nature of plants in a structured format that can be queried.
 
-For example, it's been discussed that there are many complex and changing characteristics of plants that are not captured in most data sets, and these would be immensely useful for a number of applications.
+For example, it's been discussed that there are many complex and changing characteristics of plants that are not captured in most data sets, and these would be immensely useful for a number of applications:
+
+* Finding relationships between plants in different stages for research
+* Planning for multi-season landscapes
+* Predicting behavior of families of plants
 
 ### Characteristics to consider
 
