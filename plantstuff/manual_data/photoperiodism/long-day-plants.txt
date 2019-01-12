@@ -1,0 +1,25 @@
+[source:wikipedia]
+arabidopsis thaliana
+aster
+barley
+bellflower
+california poppy
+carnation
+clover
+coneflower
+henbane
+lettuce
+oat
+onion
+pea
+potatoe
+radish
+ryegrass
+spinach
+spring wheat
+sugar beet
+turnip
+wheat
+
+
+

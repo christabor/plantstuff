@@ -1,0 +1,8 @@
+[source:wikipedia]
+plant_name
+common bean
+dandelion
+maize
+pea
+sunflower
+tomatoes
