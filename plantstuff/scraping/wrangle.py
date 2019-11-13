@@ -3,7 +3,7 @@
 import json
 import subprocess
 
-from plantstuff.core.decorators import to_json
+from plantstuff.scraper_utils.decorators import to_json
 
 DATA_SOURCES = [
     'daves',

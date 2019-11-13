@@ -16,15 +16,14 @@ setup(
     long_description=__doc__,
     author=pkg.__author__,
     author_email=pkg.__author_email__,
-    install_requires=[
-        'fabric',
-        'pyquery',
-        'requests',
-    ],
-    tests_require=[
-        'pytest',
-        'pytest-cov',
-    ],
+    install_requires=[],
+    extras_require={
+        'app': ['flask'],
+        'dataviz': ['pygraphviz'],
+        'ocr': ['pytesseract'],
+        'schema': ['schematics', 'neomodel'],
+        'scrapers': ['pyquery', 'scrapy', 'pymongo'],
+    },
     url=pkg.__url__,
     package_dir=pkg.__pkgdir__,
     packages=find_packages(exclude=["tests", "tests.*"]),

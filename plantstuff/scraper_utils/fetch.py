@@ -3,7 +3,7 @@ import requests
 
 from pyquery import PyQuery as Pq
 
-from plantstuff.core.decorators import cache_html
+from plantstuff.scraper_utils.decorators import cache_html
 
 
 def get_dom(directory=None):

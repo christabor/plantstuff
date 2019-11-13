@@ -4,8 +4,8 @@ from collections import defaultdict
 
 import requests
 
-from plantstuff.core import fetch
-from plantstuff.core.decorators import to_json
+from plantstuff.scraper_utils import fetch
+from plantstuff.scraper_utils.decorators import to_json
 
 API_URL = 'https://plantsdb.xyz/search?symbol={symbol}'
 USDA_PLANTLIST_URL = (

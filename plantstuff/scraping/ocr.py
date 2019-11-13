@@ -7,7 +7,7 @@ except ImportError:
     from PIL import Image
 import pytesseract
 
-from plantstuff.core.decorators import cached
+from plantstuff.scraper_utils.decorators import cached
 
 # E.g. `which tesseract`
 pytesseract.pytesseract.tesseract_cmd = '/usr/local/bin/tesseract'
