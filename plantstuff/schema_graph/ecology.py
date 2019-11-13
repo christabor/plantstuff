@@ -3179,4 +3179,5 @@ class Ecology(Model):
     ]}, required=True)
 
     locales = ListProp(StringProp(choices={c: c for c in US_COUNTIES}))
+    # TODO: add
     # "nreg_wet_status =

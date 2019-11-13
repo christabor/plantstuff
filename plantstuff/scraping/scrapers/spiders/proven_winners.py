@@ -1,6 +1,5 @@
 import scrapy
 
-
 # This package
 from scrapers.formatters import (
     labelize,
