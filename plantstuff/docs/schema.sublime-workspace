@@ -1,0 +1,1857 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get_init",
+				"get_initial_shas_from_correlated"
+			],
+			[
+				"clust",
+				"cluster_conf"
+			],
+			[
+				"counter",
+				"Counter\t(class)"
+			],
+			[
+				"exclude",
+				"exclude_punct\t(wordcloud.py)"
+			],
+			[
+				"Invalid",
+				"InvalidSchemaError"
+			],
+			[
+				"validate_",
+				"validate_raw_json_grid\t(schema.py)"
+			],
+			[
+				"loadin",
+				"loadingOverlay"
+			],
+			[
+				"group_h",
+				"group_hw_stats_by_pool"
+			],
+			[
+				"timline",
+				"timeline_nodes"
+			],
+			[
+				"globa",
+				"global_querystring"
+			],
+			[
+				"GLobal",
+				"GlobalListsFilterForm"
+			],
+			[
+				"serial",
+				"serialize"
+			],
+			[
+				"glob",
+				"global_querystring"
+			],
+			[
+				"jsondas",
+				"jsondash_demo_mode=1"
+			],
+			[
+				"cateo",
+				"category"
+			],
+			[
+				"defua",
+				"defaultdict"
+			],
+			[
+				"getALl",
+				"getAllMatchingProp"
+			],
+			[
+				"rela",
+				"realpath()\tos"
+			],
+			[
+				"fix",
+				"fixtures"
+			],
+			[
+				"isP",
+				"isPlainObject\t(app.js)"
+			],
+			[
+				"thenAlld",
+				"thenAllDoneFailed"
+			],
+			[
+				"unqo",
+				"unquote_plus\tfunction"
+			],
+			[
+				"url",
+				"urllib"
+			],
+			[
+				"redirec",
+				"redirect_to"
+			],
+			[
+				"no_s",
+				"no_stdv2"
+			],
+			[
+				"succed",
+				"succeeded_failed"
+			],
+			[
+				"succ",
+				"succeeded\t(param)"
+			],
+			[
+				"succe",
+				"succeeded\t[]"
+			],
+			[
+				"status_",
+				"status_buckets"
+			],
+			[
+				"make_",
+				"make_gridlines_simple"
+			],
+			[
+				"running_",
+				"running_outliers_display"
+			],
+			[
+				"waiting_r",
+				"waiting_running_params"
+			],
+			[
+				"cach",
+				"cached_data"
+			],
+			[
+				"fa-que",
+				"fa-question-circle\t font-awesome.min.css"
+			],
+			[
+				"waiting_R",
+				"waiting_running_params"
+			],
+			[
+				"faild_",
+				"failed_succ"
+			],
+			[
+				"get_runnin",
+				"get_running_waiting_testlists"
+			],
+			[
+				"statu_",
+				"status_code\tstatement"
+			],
+			[
+				"runn",
+				"running_waiting"
+			],
+			[
+				"runnin",
+				"running_waiting"
+			],
+			[
+				"q_le",
+				"queue_length_buckets"
+			],
+			[
+				"runni",
+				"running_buckets"
+			],
+			[
+				"que",
+				"queue_length_buckets"
+			],
+			[
+				"loadTe",
+				"loadTestlistChart"
+			],
+			[
+				"incomp",
+				"incomplete_list_form"
+			],
+			[
+				"Hard",
+				"HardwareFilterForm\t(forms.py)"
+			],
+			[
+				"Compl",
+				"CompleteListsForm\t(forms.py)"
+			],
+			[
+				"get_",
+				"get_testlists"
+			],
+			[
+				"open_bug",
+				"open_bugs_by_team_keywords\tfunction"
+			],
+			[
+				"gete",
+				"getenv\tfunction"
+			],
+			[
+				"get",
+				"getRwSubchartDims"
+			],
+			[
+				"trans",
+				"transition\tCSS - transition: ;"
+			],
+			[
+				"transi",
+				"transition"
+			],
+			[
+				"active-gra",
+				"active-graph-container\t(index.html)"
+			],
+			[
+				"border-bott",
+				"border-bottom-width"
+			],
+			[
+				"border-bot",
+				"border-bottom-style"
+			],
+			[
+				"data-subm",
+				"data-submetric-std1"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"testli",
+				"testlists_completed\t(bp.py)"
+			],
+			[
+				"hw",
+				"hardware\t(filters.js)"
+			],
+			[
+				"init",
+				"initRWDashboard"
+			],
+			[
+				"testlis",
+				"testlistRunning"
+			],
+			[
+				"data-sub",
+				"data-submetric-median\t(lists-running.html)"
+			],
+			[
+				"fa-excl",
+				"fa-exclamation-triangle\t font-awesome.min.css"
+			],
+			[
+				"weel",
+				"wheeltab"
+			],
+			[
+				"Sele",
+				"SelectField\t(class)"
+			],
+			[
+				"build_job",
+				"build_jobs_by_user"
+			],
+			[
+				"fa-excla",
+				"fa-exclamation-circle\t font-awesome.min.css"
+			],
+			[
+				"rwd",
+				"rwdash_bp"
+			],
+			[
+				"conflict_a_",
+				"conflict_a_8004_files"
+			],
+			[
+				"deprecate",
+				"deprecated_by"
+			],
+			[
+				"deprec",
+				"deprecated_by"
+			],
+			[
+				"depr",
+				"deprecates"
+			],
+			[
+				"conflic",
+				"conflicts_with"
+			],
+			[
+				"PatchH",
+				"PatchConflictsWith"
+			],
+			[
+				"this_p",
+				"this_patch_versions"
+			],
+			[
+				"this_pat",
+				"this_patch_bugs"
+			],
+			[
+				"Integ",
+				"IntegrityError"
+			],
+			[
+				"thir",
+				"thirty_days_ago"
+			],
+			[
+				"fa-chec",
+				"fa-check-circle\t font-awesome.min.css"
+			],
+			[
+				"isins",
+				"isinstance"
+			],
+			[
+				"conflitin",
+				"conflicting_8.0.1.x"
+			],
+			[
+				"context",
+				"contextmanager\tfunction"
+			],
+			[
+				"PatchDe",
+				"PatchDeprecates\t(models.py)"
+			],
+			[
+				"compone",
+				"components"
+			],
+			[
+				"depre",
+				"deprecations"
+			],
+			[
+				"conf",
+				"conflicts_with"
+			],
+			[
+				"patch_bud",
+				"patch_builds"
+			],
+			[
+				"patch_buid",
+				"patch_builds"
+			],
+			[
+				"descr",
+				"descriptions_to_populate"
+			],
+			[
+				"inline-bl",
+				"inline-block-group"
+			],
+			[
+				"initM",
+				"initMailerPreview"
+			],
+			[
+				"pretty",
+				"prettifyJSONPreview"
+			],
+			[
+				"compon",
+				"component"
+			],
+			[
+				"url_fo",
+				"url_for('dynamic.resource_detail\t(index.html)"
+			],
+			[
+				"fa-check-cirlc",
+				"fa-check-circle-o\t font-awesome.min.css"
+			],
+			[
+				"Dyna",
+				"DynamicForm\t(bp.py)"
+			],
+			[
+				"AddSe",
+				"AddServiceAdvancedForm"
+			],
+			[
+				"health",
+				"healthcheck_url\t(INTEGRATION_SPEC_v1.md)"
+			],
+			[
+				"heartb",
+				"heartbeat_ival"
+			],
+			[
+				"heart",
+				"healthcheck_url\t(settings.py)"
+			],
+			[
+				"heal",
+				"healthcheck_url\t(settings.py)"
+			],
+			[
+				"healthc",
+				"healthcheck_url\t(svc_info.py)"
+			],
+			[
+				"get_corr",
+				"get_correlated_url"
+			],
+			[
+				"MAKECLU",
+				"MAKECLUSTER_URL"
+			],
+			[
+				"Connect",
+				"ConnectTimeout\tclass"
+			],
+			[
+				"Serv",
+				"ServiceInfo"
+			],
+			[
+				"isseu",
+				"issue_url"
+			],
+			[
+				"patch_",
+				"patch_service"
+			],
+			[
+				"form",
+				"format_bugs\t(bp.py)"
+			],
+			[
+				"serialize",
+				"serialize2JSON"
+			],
+			[
+				"bu",
+				"build_manager"
+			],
+			[
+				"callac",
+				"callback_url"
+			],
+			[
+				"Bugzill",
+				"BugzillaEmptyObj"
+			],
+			[
+				"STEPS",
+				"STEPS_ORDERED_NAMES"
+			],
+			[
+				"test_parse_status_from_whiteboard_random_no_change",
+				"test_parse_status_from_whiteboard_random_no_change\t(function)"
+			],
+			[
+				"Select",
+				"SelectMultipleField"
+			],
+			[
+				"searcho",
+				"searchform_data"
+			],
+			[
+				"exce",
+				"Exception\t(class)"
+			],
+			[
+				"MCS_SER",
+				"MCS_SERVICE_URI"
+			],
+			[
+				"readme_a",
+				"readme_approved_by\t(bp.py)"
+			],
+			[
+				"platform",
+				"populate_forms_from_db\t(bp.py)"
+			],
+			[
+				"Integer",
+				"IntegerField"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"ava",
+				"avail"
+			],
+			[
+				"avail",
+				"availability\t(bp.py)"
+			],
+			[
+				"get_p",
+				"get_patch_branch\t(bp.py)"
+			],
+			[
+				"MASTER_",
+				"MASTER_TEMPLATES_BRANCH\t(bp.py)"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"set markd",
+				"Set Syntax: Markdown GFM"
+			],
+			[
+				"duplic",
+				"File: Duplicate"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git add cur",
+				"Git: Add Current File"
+			],
+			[
+				"dif cur",
+				"Git: Diff Current File"
+			],
+			[
+				"edit pro",
+				"Project: Edit Project"
+			],
+			[
+				"swap",
+				"SwapStrings: Swap quotes"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"edit",
+				"Project: Edit Project"
+			],
+			[
+				"project m",
+				"Project Manager"
+			],
+			[
+				"edit ",
+				"Project: Edit Project"
+			],
+			[
+				"git diff cur",
+				"Git: Diff Current File"
+			],
+			[
+				"git comt",
+				"GitGutter: Compare Against Tag"
+			],
+			[
+				"set groov",
+				"Set Syntax: Groovy"
+			],
+			[
+				"add fold",
+				"Add Folders To Project"
+			],
+			[
+				"add ",
+				"Add Folders To Project"
+			],
+			[
+				"edit proj",
+				"Project Manager: Edit Project"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"df cur",
+				"Git: Diff Current File"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"color",
+				"Color Picker"
+			],
+			[
+				"check",
+				"Git: Checkout Current File"
+			],
+			[
+				"move",
+				"Quick File Move: Move Current File"
+			],
+			[
+				"modal",
+				"Snippet: bs3-modal"
+			],
+			[
+				"diff cur",
+				"Git: Diff Current File"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"panel",
+				"Snippet: bs3-panel-heading"
+			],
+			[
+				"label",
+				"Snippet: bs3-label"
+			],
+			[
+				"markdownToc",
+				"MarkdownTOC:Update TOC"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"copy pat",
+				"Copy File Path"
+			],
+			[
+				"gener",
+				"Generate UUID v4"
+			],
+			[
+				"set json",
+				"Set Syntax: JSON"
+			],
+			[
+				"dif all",
+				"Git: Diff All Files"
+			],
+			[
+				"alig",
+				"AlignTab"
+			],
+			[
+				"set markdown",
+				"Set Syntax: Markdown GFM"
+			],
+			[
+				"git ad d cur",
+				"Git: Add Current File"
+			],
+			[
+				"dfif cur",
+				"Git: Diff Current File"
+			],
+			[
+				"it add cur",
+				"Git: Add Current File"
+			],
+			[
+				"alg",
+				"AlignTab"
+			],
+			[
+				"panel h",
+				"Snippet: bs3-panel-heading"
+			],
+			[
+				"set markdo",
+				"Set Syntax: Markdown GFM"
+			],
+			[
+				"renam",
+				"File: Rename"
+			],
+			[
+				"rneame",
+				"Rename IPython Notebook"
+			],
+			[
+				"p",
+				"Preferences: Settings"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"packa ins",
+				"Package Control: Install Package"
+			],
+			[
+				"prefer",
+				"Preferences: Settings"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"pacak insl",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"indall",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"find",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"remove pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"findkey",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"upgrade",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"pacak ins",
+				"Package Control: Install Package"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"gitp ush",
+				"Git: Push"
+			],
+			[
+				"git check c",
+				"Git: Checkout Current File"
+			],
+			[
+				"panel-su",
+				"Snippet: bs3-panel-success"
+			],
+			[
+				"bootstrap popo",
+				"Snippet: Bootstrap pills with dropdowns"
+			],
+			[
+				"riend",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"insert d",
+				"InsertDate: Default"
+			],
+			[
+				"bs3 tab",
+				"Snippet: bs3-tabs"
+			],
+			[
+				"git dif cur",
+				"Git: Diff Current File"
+			],
+			[
+				"checkout",
+				"Git: Checkout Tag"
+			],
+			[
+				"setp",
+				"Set Syntax: Python"
+			],
+			[
+				"git commi",
+				"Git: Commit"
+			],
+			[
+				"git unstage",
+				"Git: Reset (unstage) All"
+			],
+			[
+				"git ad",
+				"Git: Add All"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"lo",
+				"Convert Case: Lower Case"
+			],
+			[
+				"low",
+				"Convert Case: Lower Case"
+			],
+			[
+				"isort",
+				"ImportSort: Sort imports"
+			],
+			[
+				"panel-",
+				"Snippet: bs3-panel-info"
+			],
+			[
+				"git add  cur",
+				"Git: Add Current File"
+			],
+			[
+				"sqa",
+				"Snippet: jQuery AJAX call"
+			],
+			[
+				"reverse",
+				"Permute Lines: Reverse"
+			],
+			[
+				"rever",
+				"File: Revert"
+			],
+			[
+				"git ocm",
+				"Git: Commit"
+			],
+			[
+				"defa",
+				"InsertDate: Default"
+			],
+			[
+				"up",
+				"Convert Case: Upper Case"
+			],
+			[
+				"git add ",
+				"Git: Add Current File"
+			],
+			[
+				"date",
+				"InsertDate: Default"
+			],
+			[
+				"uuid",
+				"Generate UUID v4"
+			],
+			[
+				"copy pa",
+				"Copy File Path"
+			],
+			[
+				"dif cru",
+				"Git: Diff Tool Current File"
+			],
+			[
+				"dif ur",
+				"Git: Diff Current File"
+			],
+			[
+				"git blame",
+				"Git: Blame"
+			],
+			[
+				"set python",
+				"Set Syntax: Python"
+			],
+			[
+				"git ",
+				"Git: Commit"
+			],
+			[
+				"git ad du",
+				"Git: Add Current File"
+			],
+			[
+				"git ad cur",
+				"Git: Add Current File"
+			],
+			[
+				"pgaination",
+				"Snippet: bs3-pagination"
+			],
+			[
+				"git log cur",
+				"Git: Log Current File"
+			],
+			[
+				"git log",
+				"Git: Log All"
+			],
+			[
+				"git log f",
+				"Git: Log Current File"
+			],
+			[
+				"log curr",
+				"Git: Log Current File"
+			],
+			[
+				"insrt da",
+				"InsertDate: Default"
+			],
+			[
+				"dif cur ",
+				"Git: Diff Current File"
+			],
+			[
+				"swap c",
+				"Convert Case: Swap Case"
+			],
+			[
+				"dif cu",
+				"Git: Diff Current File"
+			],
+			[
+				"swa",
+				"SwapStrings: Swap quotes"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"generate ",
+				"Generate UUID v4"
+			],
+			[
+				"git c",
+				"Git: Commit"
+			],
+			[
+				"pref ",
+				"Preferences: Settings"
+			],
+			[
+				"set html",
+				"Set Syntax: HTML"
+			],
+			[
+				"checko",
+				"Git: Checkout Current File"
+			],
+			[
+				"dif curr",
+				"Git: Diff Current File"
+			],
+			[
+				"dif u",
+				"FileDiffs: Menu"
+			],
+			[
+				"",
+				"AlignTab"
+			],
+			[
+				"set mark",
+				"Set Syntax: Markdown GFM"
+			],
+			[
+				"et marka",
+				"SublimeLinter: Make Warnings Passive"
+			],
+			[
+				"prefere",
+				"Preferences: Settings"
+			],
+			[
+				"dif cr",
+				"Git: Diff Current File"
+			],
+			[
+				"pagination",
+				"Snippet: bs3-pagination-small"
+			],
+			[
+				"list-grou",
+				"Snippet: bs3-list-group"
+			],
+			[
+				"bs3 list",
+				"Snippet: bs3-list-group"
+			],
+			[
+				"bpanel",
+				"Snippet: bs3-panel-info"
+			],
+			[
+				"git add ucr",
+				"Git: Add Current File"
+			],
+			[
+				"gi t  add cur",
+				"Git: Add Current File"
+			]
+		],
+		"width": 480.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/taborc/git/ext/plantstuff/plantstuff/docs/schema.md",
+		"/Users/taborc/git/ext/plantstuff/plantstuff/docs/queries.md",
+		"/Users/taborc/git/ext/plantstuff/.git/COMMIT_EDITMSG",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools.wiki/test_matrix/8x_force_reboot_success/patch.json",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools.wiki/test_matrix/8x_force_reboot_success/patch.xml",
+		"/Users/taborc/git/ext/plantstuff/plantstuff/schema/testing_schematics.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/nodetest/config.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools.wiki/test_matrix/8x_force_reboot_success/differences.txt",
+		"/Users/taborc/Downloads/test_patch_for_service_restart_and_manual_reboot/+CONTENTS",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/nodetest/services.py",
+		"/Users/taborc/git/spog/spog/spog/services_info.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/nodetest/workflow.py",
+		"/Users/taborc/git/isilon/patch_automation.sublime-project",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/nodetest/uninstall.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/nodetest/pid_utils.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/.git/COMMIT_EDITMSG",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/tests/test_unit/test_nodetest/test_commands.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/tests/test_unit/test_nodetest/test_uninstall.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/tests/test_unit/test_nodetest/test_install.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/Makefile",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/.coveragerc",
+		"/Users/taborc/git/ctabor/tech-doc/.git/COMMIT_EDITMSG",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/tests/test_unit/test_nodetest/test_workflow.py",
+		"/Users/taborc/git/isilon/IME-Patch/pipeline/src/JenkinsFile",
+		"/Users/taborc/git/spog/spog/spog/templates/patch_automation/partials/readme-checklist.html",
+		"/Users/taborc/git/spog/spog/spog/services/patch_automation/bp.py",
+		"/Users/taborc/git/spog/spog/.git/COMMIT_EDITMSG",
+		"/Users/taborc/git/spog/spog/spog/services/patch_automation/serializers.py",
+		"/Users/taborc/.patch_automation/analysis_data/differences.txt",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/schema/patch_xml.py",
+		"/Users/taborc/git/spog/spog/spog/services/patch_automation/readme.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/tests/test_unit/test_nodetest/test_fabfile.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/nodetest/fabfile.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/nodetest/sha_utils.py",
+		"/Users/taborc/git/spog/envious/src/isilon/envious/envs.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/nodetest/cluster.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/tests/test_integration/test_makepatch_workflow_simple.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/tests/test_unit/test_nodetest/test_workflows.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/schema/job.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/pdk/utils.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/PDK.todo",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/pdk/operations.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/pdk/git.py",
+		"/Users/taborc/.patch_automation/patches_data/patch-191367/README-draft.txt",
+		"/Users/taborc/.patch_automation/config.ini",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/pdk/advise.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/conflicts.txt",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/pdk/contrib.py",
+		"/Users/taborc/git/spog/spog/spog/services/patch_automation/filters.py",
+		"/Users/taborc/.patch_automation/_config.ini",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/pdk/ini_template.ini",
+		"/Users/taborc/.patch_automation/config_.ini",
+		"/Users/taborc/.patch_automation/patches_data/patch-223824/patch.xml",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/patch_automation/pdk/templates.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/setup.py",
+		"/Users/taborc/git/spog/spog/setup.py",
+		"/Users/taborc/git/isilon/patch_automation/src/patch_automation/modules/manager.py",
+		"/Users/taborc/git/isilon/patch_automation/src/patch_automation/modules/build.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/nodetest/build.py",
+		"/Users/taborc/git/isilon/patch_automation/src/patch_automation/__main__.py",
+		"/Users/taborc/git/isilon/patch_automation/src/patch_automation/__init__.py",
+		"/Users/taborc/git/isilon/patch_automation/src/patch_automation/modules/vonefs.py",
+		"/Users/taborc/git/isilon/patch_automation/src/patch_automation/modules/patch.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/nodetest/fabfile.py",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/nodetest/example-conf.json",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/nodetest/patch-189198.pkg",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/README.md",
+		"/Users/taborc/git/isilon/IME-Patch/workflow_tools/run_external_onefs_job/run_external_job.py",
+		"/Users/taborc/git/spog/spog/spog/services/rwdash/forms.py",
+		"/Users/taborc/git/spog/spog/spog/services/rwdash/bp.py",
+		"/Users/taborc/git/spog/spog/spog/templates/mcs/pages/requests.html",
+		"/Users/taborc/git/spog/spog/spog/templates/rwdash/pages/index.html",
+		"/Users/taborc/git/spog/spog/spog/services/mcs/forms.py",
+		"/Users/taborc/git/spog/spog/spog/templates/rwdash/partials/forms/global-list-form.html",
+		"/Users/taborc/git/spog/spog/spog/services/mcs/bp.py",
+		"/Users/taborc/git/spog/spog/spog/templates/mcs/pages/start.html",
+		"/Users/taborc/git/spog/spog/spog/static/sass/services/mcs/app.scss",
+		"/Users/taborc/git/spog/flask_jsondash/flask_jsondash/static/css/app.css",
+		"/Users/taborc/git/spog/spog/spog/services/rwdash/status_utils.py",
+		"/Users/taborc/git/spog/spog/spog/static/js/rwdash/filters.js",
+		"/Users/taborc/git/spog/spog/spog/services/rwdash/stats.py",
+		"/Users/taborc/git/spog/spog/spog/services/rwdash/dates.py",
+		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/collections.py",
+		"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_abcoll.py",
+		"/Users/taborc/git/spog/spog/spog/app.py",
+		"/Users/taborc/git/spog/flask_jsondash/setup.py",
+		"/Users/taborc/git/spog/flask_jsondash/flask_jsondash/data_utils/filetree.py",
+		"/Users/taborc/git/spog/flask_jsondash/docs/data_utils.md",
+		"/Users/taborc/git/spog/flask_jsondash/flask_jsondash/data_utils/wordcloud.py",
+		"/Users/taborc/git/spog/flask_jsondash/tests/test_wordcloud.py",
+		"/Users/taborc/git/spog/flask_jsondash/README.md",
+		"/Users/taborc/git/spog/flask_jsondash/tests/test_charts_builder.py",
+		"/Users/taborc/git/spog/flask_jsondash/tests/conftest.py",
+		"/Users/taborc/git/spog/flask_jsondash/flask_jsondash/charts_builder.py",
+		"/Users/taborc/git/spog/flask_jsondash/flask_jsondash/static/js/app.js",
+		"/Users/taborc/git/spog/flask_jsondash/flask_jsondash/templates/partials/dashboard-edit-modal.html",
+		"/Users/taborc/git/spog/flask_jsondash/tests/test_model_factories.py",
+		"/Users/taborc/git/spog/flask_jsondash/flask_jsondash/chart_adapters/wordcloud.py",
+		"/Users/taborc/git/spog/flask_jsondash/flask_jsondash/chart_adapters/config.py",
+		"/Users/taborc/git/spog/flask_jsondash/flask_jsondash/chart_adapters/__init__.py",
+		"/Users/taborc/git/spog/flask_jsondash/flask_jsondash/settings.py",
+		"/Users/taborc/git/spog/flask_jsondash/flask_jsondash/static/js/handlers.js",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/endpoints.py",
+		"/Users/taborc/git/spog/flask_jsondash/Makefile",
+		"/Users/taborc/git/spog/flask_jsondash/docs/schemas.md",
+		"/Users/taborc/git/spog/flask_jsondash/flask_jsondash/static/js/utils.js",
+		"/Users/taborc/git/spog/spog/spog/services/metrics/utils.py",
+		"/Users/taborc/git/spog/spog/spog/static/css/mmailer/app.css",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/numbergroups.json",
+		"/Users/taborc/git/spog/flask_jsondash/EndpointsDockerfile",
+		"/Users/taborc/git/spog/flask_jsondash/docs/config.md",
+		"/Users/taborc/git/spog/flask_jsondash/flask_jsondash/static/css/overrides.css",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/images.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/example.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/cytoscape/basic.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/plotly.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/kitchensink.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/inputs.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/fixedlayout.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/fixedlayout-d3.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/fixedlayout-c3.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/embeddable.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/digraph.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/cytoscape.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/all-errors.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/shared-data.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/sigma.json",
+		"/Users/taborc/git/spog/flask_jsondash/example_app/examples/config/stresstest.json"
+	],
+	"find":
+	{
+		"height": 52.0
+	},
+	"find_in_files":
+	{
+		"height": 207.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 57.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CSS Extended Completions":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 165.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 80.0
+	},
+	"output.jotter":
+	{
+		"height": 116.0
+	},
+	"pinned_build_system": "",
+	"project": "schema.sublime-project",
+	"replace":
+	{
+		"height": 76.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				".md",
+				"plantstuff/docs/schema.md"
+			],
+			[
+				"services.py",
+				"workflow_tools/patch_automation/nodetest/services.py"
+			],
+			[
+				"service",
+				"spog/spog/services_info.py"
+			],
+			[
+				"workflow",
+				"workflow_tools/patch_automation/nodetest/workflow.py"
+			],
+			[
+				"pid_u",
+				"workflow_tools/patch_automation/nodetest/pid_utils.py"
+			],
+			[
+				"workflow.py",
+				"workflow_tools/patch_automation/nodetest/workflow.py"
+			],
+			[
+				"test_comamnds",
+				"workflow_tools/tests/test_unit/test_nodetest/test_commands.py"
+			],
+			[
+				"uninstall",
+				"workflow_tools/patch_automation/nodetest/uninstall.py"
+			],
+			[
+				"test_uninstall.",
+				"workflow_tools/tests/test_unit/test_nodetest/test_install.py"
+			],
+			[
+				".coveragerc",
+				"workflow_tools/.coveragerc"
+			],
+			[
+				"makef",
+				"workflow_tools/Makefile"
+			],
+			[
+				"test_workf",
+				"workflow_tools/tests/test_unit/test_nodetest/test_workflow.py"
+			],
+			[
+				"test/work",
+				"workflow_tools/patch_automation/nodetest/workflow.py"
+			],
+			[
+				"src/",
+				"pipeline/src/JenkinsFile"
+			],
+			[
+				"src",
+				"spog/spog/templates/patch_automation/partials/readme-checklist.html"
+			],
+			[
+				"diff",
+				".patch_automation/analysis_data/differences.txt"
+			],
+			[
+				"difference",
+				".patch_automation/analysis_data/differences.txt"
+			],
+			[
+				"patch/bp.p",
+				"spog/spog/services/patch_automation/bp.py"
+			],
+			[
+				"patc/bp.p",
+				"spog/spog/services/patch_automation/bp.py"
+			],
+			[
+				"cluster.",
+				"workflow_tools/patch_automation/nodetest/cluster.py"
+			],
+			[
+				"job.",
+				"workflow_tools/patch_automation/schema/job.py"
+			],
+			[
+				"job.py",
+				"workflow_tools/patch_automation/schema/job.py"
+			],
+			[
+				"operations.p",
+				"workflow_tools/patch_automation/pdk/operations.py"
+			],
+			[
+				"contrib.py",
+				"workflow_tools/patch_automation/pdk/contrib.py"
+			],
+			[
+				"advise.py",
+				"workflow_tools/patch_automation/pdk/advise.py"
+			],
+			[
+				"contrib.",
+				"workflow_tools/patch_automation/pdk/contrib.py"
+			],
+			[
+				"utils.",
+				"workflow_tools/patch_automation/pdk/utils.py"
+			],
+			[
+				"ini_",
+				"workflow_tools/patch_automation/pdk/ini_template.ini"
+			],
+			[
+				"operations",
+				"workflow_tools/patch_automation/pdk/operations.py"
+			],
+			[
+				"config.ini",
+				".patch_automation/config.ini"
+			],
+			[
+				"contrib",
+				"workflow_tools/patch_automation/pdk/contrib.py"
+			],
+			[
+				"operat",
+				"workflow_tools/patch_automation/pdk/operations.py"
+			],
+			[
+				"pdk.todo",
+				"workflow_tools/PDK.todo"
+			],
+			[
+				"pdk/utils.p",
+				"workflow_tools/patch_automation/pdk/utils.py"
+			],
+			[
+				"buid",
+				"patch_automation/src/patch_automation/modules/build.py"
+			],
+			[
+				"__main",
+				"patch_automation/src/patch_automation/__main__.py"
+			],
+			[
+				"manager.",
+				"patch_automation/src/patch_automation/modules/manager.py"
+			],
+			[
+				"readme",
+				"IME-Patch/workflow_tools/README.md"
+			],
+			[
+				"fabi",
+				"IME-Patch/workflow_tools/nodetest/fabfile.py"
+			],
+			[
+				"nodetest/",
+				"IME-Patch/workflow_tools/nodetest/fabfile.py"
+			],
+			[
+				"atch.py",
+				"src/patch_automation/modules/patch.py"
+			],
+			[
+				"filter.js",
+				"spog/static/js/rwdash/filters.js"
+			],
+			[
+				"mcs/forms",
+				"spog/services/mcs/forms.py"
+			],
+			[
+				"forms.p",
+				"spog/services/rwdash/forms.py"
+			],
+			[
+				"rwdas/bp.p",
+				"spog/services/rwdash/bp.py"
+			],
+			[
+				"mcs/request",
+				"spog/templates/mcs/pages/requests.html"
+			],
+			[
+				"start/index",
+				"spog/templates/rwdash/pages/index.html"
+			],
+			[
+				"rest_uti",
+				"spog/rest_utils.py"
+			],
+			[
+				"mcs/bp.p",
+				"spog/services/mcs/bp.py"
+			],
+			[
+				"global-list",
+				"spog/templates/rwdash/partials/forms/global-list-form.html"
+			],
+			[
+				"rwd/index",
+				"spog/templates/rwdash/pages/index.html"
+			],
+			[
+				"requests.",
+				"spog/templates/mcs/pages/requests.html"
+			],
+			[
+				"envs.p",
+				"envious/envs.py"
+			],
+			[
+				"start.html",
+				"spog/templates/mcs/pages/start.html"
+			],
+			[
+				"mcs/.scss",
+				"spog/static/sass/services/mcs/app.scss"
+			],
+			[
+				"app.css",
+				"flask_jsondash/flask_jsondash/static/css/app.css"
+			],
+			[
+				"mcs/start.ht",
+				"spog/templates/mcs/pages/start.html"
+			],
+			[
+				"mcs/bpp",
+				"spog/services/mcs/bp.py"
+			],
+			[
+				"envious",
+				"envious/envs.py"
+			],
+			[
+				"filters.",
+				"spog/static/js/rwdash/filters.js"
+			],
+			[
+				"stats.py",
+				"spog/services/rwdash/stats.py"
+			],
+			[
+				"app.p",
+				"spog/app.py"
+			],
+			[
+				"filters.js",
+				"spog/static/js/rwdash/filters.js"
+			],
+			[
+				"spog/app.p",
+				"spog/app.py"
+			],
+			[
+				"data_utils.md",
+				"flask_jsondash/docs/data_utils.md"
+			],
+			[
+				"readme.md",
+				"flask_jsondash/README.md"
+			],
+			[
+				"test_chart",
+				"flask_jsondash/tests/test_charts_builder.py"
+			],
+			[
+				"chart_bui",
+				"flask_jsondash/flask_jsondash/charts_builder.py"
+			],
+			[
+				"test_wordc",
+				"flask_jsondash/tests/test_wordcloud.py"
+			],
+			[
+				"app.js",
+				"flask_jsondash/flask_jsondash/static/js/app.js"
+			],
+			[
+				"wordcloud",
+				"flask_jsondash/flask_jsondash/data_utils/wordcloud.py"
+			],
+			[
+				"setup.py",
+				"flask_jsondash/setup.py"
+			],
+			[
+				"schema.md",
+				"flask_jsondash/docs/schemas.md"
+			],
+			[
+				"endpoin",
+				"flask_jsondash/example_app/endpoints.py"
+			],
+			[
+				"end",
+				"flask_jsondash/example_app/endpoints.py"
+			],
+			[
+				"utils.js",
+				"flask_jsondash/flask_jsondash/static/js/utils.js"
+			],
+			[
+				"util",
+				"spog/services/metrics/utils.py"
+			],
+			[
+				"handlers",
+				"flask_jsondash/flask_jsondash/static/js/handlers.js"
+			],
+			[
+				"number",
+				"flask_jsondash/example_app/examples/config/numbergroups.json"
+			],
+			[
+				"handler",
+				"flask_jsondash/flask_jsondash/static/js/handlers.js"
+			],
+			[
+				"endo",
+				"flask_jsondash/example_app/endpoints.py"
+			],
+			[
+				"endpoint",
+				"flask_jsondash/EndpointsDockerfile"
+			],
+			[
+				"schemas",
+				"flask_jsondash/docs/schemas.md"
+			],
+			[
+				"config.md",
+				"flask_jsondash/docs/config.md"
+			],
+			[
+				"image.json",
+				"flask_jsondash/example_app/examples/config/images.json"
+			],
+			[
+				"basic.json",
+				"flask_jsondash/example_app/examples/cytoscape/basic.json"
+			],
+			[
+				"numbergr",
+				"flask_jsondash/example_app/examples/config/numbergroups.json"
+			],
+			[
+				"images",
+				"flask_jsondash/example_app/examples/config/images.json"
+			],
+			[
+				"digr",
+				"flask_jsondash/example_app/examples/config/digraph.json"
+			],
+			[
+				"json/app.css",
+				"flask_jsondash/flask_jsondash/static/css/app.css"
+			],
+			[
+				"overdies.css",
+				"flask_jsondash/flask_jsondash/static/css/overrides.css"
+			],
+			[
+				"fixt",
+				"flask_jsondash/example_app/examples/config/fixedlayout.json"
+			],
+			[
+				"settings",
+				"flask_jsondash/flask_jsondash/settings.py"
+			],
+			[
+				"cytos",
+				"flask_jsondash/example_app/examples/config/cytoscape.json"
+			],
+			[
+				"sigma",
+				"flask_jsondash/example_app/examples/config/sigma.json"
+			],
+			[
+				"sigmajs",
+				"flask_jsondash/example_app/examples/config/sigma.json"
+			],
+			[
+				"stress",
+				"flask_jsondash/example_app/examples/config/stresstest.json"
+			],
+			[
+				"all-er",
+				"flask_jsondash/example_app/examples/config/all-errors.json"
+			],
+			[
+				"digra",
+				"flask_jsondash/example_app/examples/config/digraph.json"
+			],
+			[
+				"kitchen",
+				"flask_jsondash/example_app/examples/config/kitchensink.json"
+			],
+			[
+				"test_model_f",
+				"flask_jsondash/tests/test_model_factories.py"
+			],
+			[
+				"model_fac",
+				"flask_jsondash/flask_jsondash/model_factories.py"
+			],
+			[
+				"makefi",
+				"flask_jsondash/Makefile"
+			],
+			[
+				"kitcen",
+				"flask_jsondash/example_app/examples/config/kitchensink.json"
+			],
+			[
+				"rwd/bp.p",
+				"spog/services/rwdash/bp.py"
+			],
+			[
+				"rw/bp.p",
+				"spog/services/rwdash/bp.py"
+			],
+			[
+				"rw/macro",
+				"spog/templates/rwdash/partials/macros.html"
+			],
+			[
+				"chart_bild",
+				"flask_jsondash/flask_jsondash/charts_builder.py"
+			],
+			[
+				"jsondash/app.css",
+				"flask_jsondash/flask_jsondash/static/css/app.css"
+			],
+			[
+				"modal",
+				"flask_jsondash/flask_jsondash/templates/partials/dashboard-edit-modal.html"
+			],
+			[
+				"data_utils/.py",
+				"flask_jsondash/flask_jsondash/data_utils/wordcloud.py"
+			],
+			[
+				"confte",
+				"flask_jsondash/tests/conftest.py"
+			],
+			[
+				"schema.p",
+				"flask_jsondash/flask_jsondash/schema.py"
+			],
+			[
+				"jsondash/chart_bui",
+				"flask_jsondash/flask_jsondash/charts_builder.py"
+			],
+			[
+				"utils.py",
+				"spog/services/metrics/utils.py"
+			],
+			[
+				"app.scss",
+				"spog/static/sass/app.scss"
+			],
+			[
+				"rw/macros.",
+				"spog/templates/rwdash/partials/macros.html"
+			],
+			[
+				"metrics/uti",
+				"spog/services/metrics/utils.py"
+			],
+			[
+				"/index.html",
+				"spog/templates/rwdash/pages/index.html"
+			],
+			[
+				"fiters.js",
+				"spog/static/js/rwdash/filters.js"
+			],
+			[
+				"sett",
+				"spog/settings.py"
+			],
+			[
+				"app.",
+				"spog/app.py"
+			],
+			[
+				"bp.p",
+				"spog/services/rwdash/bp.py"
+			],
+			[
+				"nodes-vo",
+				"spog/templates/rwdash/partials/nodes-overview.html"
+			],
+			[
+				"nodes-ov",
+				"spog/templates/rwdash/partials/nodes-overview.html"
+			],
+			[
+				"node-v",
+				"spog/templates/rwdash/partials/nodes-overview.html"
+			],
+			[
+				"nde-ov",
+				"spog/templates/rwdash/partials/nodes-overview.html"
+			],
+			[
+				"node-",
+				"spog/templates/rwdash/partials/nodes-overview.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/git/spog/spog.sublime-project"
+			],
+			[
+				"spog",
+				"~/git/spog/spog.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 177.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

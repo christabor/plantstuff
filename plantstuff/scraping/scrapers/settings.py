@@ -56,6 +56,9 @@ ROBOTSTXT_OBEY = False
 DOWNLOADER_MIDDLEWARES = {
     'scrapers.middlewares.ScrapersDownloaderMiddleware': 543,
     'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware': 300,
+    'scrapy_splash.SplashCookiesMiddleware': 723,
+    'scrapy_splash.SplashMiddleware': 725,
+    'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
 }
 
 # Enable or disable extensions
@@ -67,7 +70,7 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'scrapers.pipelines.MongoPipeline': 50,
+    # 'scrapers.pipelines.MongoPipeline': 50,
     'scrapers.pipelines.JsonPipeline': 100,
     'scrapers.pipelines.ScrapersPipeline': 300,
 }

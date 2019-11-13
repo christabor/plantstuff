@@ -1,6 +1,6 @@
 """Scraper for university of connecticut horticulture page."""
 from plantstuff.core import fetch
-from plantstuff.core.decorators import to_json, cached
+from plantstuff.core.decorators import cached, to_json
 
 
 get_dom = fetch.get_dom(directory='../../data/wikipedia')
@@ -78,7 +78,10 @@ def get_plants_for_species(item):
 
 @to_json(directory='../../data/wikipedia')
 def get_all_plant_species_lists():
-    """Get ALL the lists of plants by species for all species."""
+    """Get ALL the lists of plants by species for all species.
+
+    TODO: remove this as it has been replaced by a scrapy spider.
+    """
     data = []
     url = 'https://en.wikipedia.org/wiki/Category:Lists_of_plant_species'
     _, dom = get_dom(url)

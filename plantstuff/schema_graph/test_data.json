@@ -1,0 +1,1847 @@
+[
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Pink", 
+      "flower_shade": "Fuchsia", 
+      "foliage_colors": [
+        "blue"
+      ], 
+      "foliage_shade": "Glaucous blue", 
+      "garden_height": "6 - 8 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "spacing": "12 - 14 Inches", 
+      "spread": "12 - 14 Inches"
+    }, 
+    "common_name": "Pinks", 
+    "features": {}, 
+    "genus": "dianthus", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Alkaline Soil", 
+        "Neutral Soil"
+      ], 
+      "uses": [
+        "container", 
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/dianthus/paint-town-fuchsia-pinks-dianthus-hybrid", 
+    "variety": "'Paint the Town Fuchsia'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Purple", 
+      "flower_shade": "Purple", 
+      "foliage_colors": [
+        "green"
+      ], 
+      "foliage_shade": "Green", 
+      "garden_height": "26 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Medium", 
+      "spacing": "18 - 24 Inches", 
+      "spread": "18 - 24 Inches"
+    }, 
+    "common_name": "Daylily", 
+    "features": {}, 
+    "genus": "hemerocallis", 
+    "needs": {
+      "bloom_time": [
+        "Mid Summer"
+      ], 
+      "hardiness_zones": [
+        "3a", 
+        "3b", 
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Neutral Soil"
+      ], 
+      "uses": [
+        "landscape"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/hemerocallis/rainbow-rhythm-nosferatu-daylily-hemerocallis-hybrid", 
+    "variety": "Rainbow Rhythm Nosferatu"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "White", 
+      "flower_shade": "White", 
+      "foliage_colors": [
+        "green"
+      ], 
+      "foliage_shade": "Green", 
+      "garden_height": "12 - 18 Inches", 
+      "habit": "Upright", 
+      "height_category": "Medium", 
+      "spacing": "16 - 24 Inches", 
+      "spread": "16 - 24 Inches"
+    }, 
+    "common_name": "Hardy Baby's Breath", 
+    "features": {}, 
+    "genus": "gypsophila", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer", 
+        "Mid Summer", 
+        "Late Summer"
+      ], 
+      "hardiness_zones": [
+        "3a", 
+        "3b", 
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Alkaline Soil"
+      ], 
+      "uses": [
+        "container", 
+        "cut", 
+        "flower", 
+        "dried", 
+        "flower", 
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "paniculata", 
+    "url": "https://www.provenwinners.com/plants/gypsophila/festival-star-hardy-babys-breath-gypsophila-paniculata", 
+    "variety": "Festival Star"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Red", 
+      "flower_shade": "Reddish orange to pinkish red", 
+      "foliage_colors": [
+        "green"
+      ], 
+      "foliage_shade": "Green", 
+      "garden_height": "12 - 16 Inches", 
+      "habit": "Upright", 
+      "height_category": "Short", 
+      "spacing": "16 - 18 Inches", 
+      "spread": "16 - 18 Inches"
+    }, 
+    "common_name": "Coneflower", 
+    "features": {}, 
+    "genus": "echinacea", 
+    "needs": {
+      "bloom_time": [
+        "Summer through Fall"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil", 
+        "Fertile Soil", 
+        "Poor Soil"
+      ], 
+      "uses": [
+        "border", 
+        "plant", 
+        "container", 
+        "cut", 
+        "flower", 
+        "dried", 
+        "flower", 
+        "landscape", 
+        "mass", 
+        "planting"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/echinacea/lakota-fire-coneflower-echinacea-hybrid", 
+    "variety": "Lakota Fire"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Pink", 
+      "flower_shade": "Pink", 
+      "foliage_colors": [
+        "blue", 
+        "green"
+      ], 
+      "foliage_shade": "Blue-green", 
+      "garden_height": "8 - 10 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "spacing": "16 - 20 Inches", 
+      "spread": "16 - 20 Inches"
+    }, 
+    "common_name": "Pinks", 
+    "features": {}, 
+    "genus": "dianthus", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Alkaline Soil"
+      ], 
+      "uses": [
+        "container", 
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/dianthus/fruit-punch-sweetie-pie-pinks-dianthus-hybrid", 
+    "variety": "Fruit Punch 'Sweetie Pie'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Pink", 
+      "flower_shade": "Fuchsia pink", 
+      "foliage_colors": [
+        "blue"
+      ], 
+      "foliage_shade": "Steel blue", 
+      "garden_height": "6 - 8 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "spacing": "12 - 14 Inches", 
+      "spread": "12 - 14 Inches"
+    }, 
+    "common_name": "Pinks", 
+    "features": {}, 
+    "genus": "dianthus", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Alkaline Soil"
+      ], 
+      "uses": [
+        "container", 
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/dianthus/fruit-punch-spiked-punch-pinks-dianthus-hybrid", 
+    "variety": "Fruit Punch 'Spiked Punch'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Pink", 
+      "flower_shade": "Raspberry pink", 
+      "foliage_colors": [
+        "blue", 
+        "green"
+      ], 
+      "foliage_shade": "Blue green", 
+      "garden_height": "8 - 10 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "spacing": "12 - 14 Inches", 
+      "spread": "12 - 14 Inches"
+    }, 
+    "common_name": "Pinks", 
+    "features": {}, 
+    "genus": "dianthus", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Alkaline Soil"
+      ], 
+      "uses": [
+        "container", 
+        "landscape"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/dianthus/fruit-punch-raspberry-ruffles-pinks-dianthus-hybrid", 
+    "variety": "Fruit Punch 'Raspberry Ruffles'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Red", 
+      "flower_shade": "Red", 
+      "foliage_colors": [
+        "blue"
+      ], 
+      "foliage_shade": "Silvery blue", 
+      "garden_height": "9 - 11 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "spacing": "12 - 14 Inches", 
+      "spread": "12 - 14 Inches"
+    }, 
+    "common_name": "Pinks", 
+    "features": {}, 
+    "genus": "dianthus", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Alkaline Soil"
+      ], 
+      "uses": [
+        "container", 
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/dianthus/fruit-punch-maraschino-pinks-dianthus-hybrid", 
+    "variety": "Fruit Punch 'Maraschino'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Pink                          Red", 
+      "flower_shade": "Magenta", 
+      "foliage_colors": [
+        "blue", 
+        "green"
+      ], 
+      "foliage_shade": "Grey-green", 
+      "garden_height": "8 - 10 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "spacing": "12 - 14 Inches", 
+      "spread": "12 - 14 Inches"
+    }, 
+    "common_name": "Pinks", 
+    "features": {}, 
+    "genus": "dianthus", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Alkaline Soil"
+      ], 
+      "uses": [
+        "container", 
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/dianthus/fruit-punch-cranberry-cocktail-pinks-dianthus-hybrid", 
+    "variety": "Fruit Punch 'Cranberry Cocktail'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Pink", 
+      "flower_shade": "Coral pink", 
+      "foliage_colors": [
+        "blue", 
+        "green"
+      ], 
+      "foliage_shade": "Blue green", 
+      "garden_height": "8 - 10 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "spacing": "12 - 14 Inches", 
+      "spread": "12 - 14 Inches"
+    }, 
+    "common_name": "Pinks", 
+    "features": {}, 
+    "genus": "dianthus", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Alkaline Soil"
+      ], 
+      "uses": [
+        "container", 
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/dianthus/fruit-punch-classic-coral-pinks-dianthus-hybrid", 
+    "variety": "Fruit Punch 'Classic Coral'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Red", 
+      "flower_shade": "Deep red", 
+      "foliage_colors": [
+        "green"
+      ], 
+      "foliage_shade": "Blue green", 
+      "garden_height": "6 - 8 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "spacing": "8 - 12 Inches", 
+      "spread": "8 - 12 Inches"
+    }, 
+    "common_name": "Pinks", 
+    "features": {}, 
+    "genus": "dianthus", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Alkaline Soil"
+      ], 
+      "uses": [
+        "container", 
+        "landscape"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/dianthus/fruit-punch-cherry-vanilla-pinks-dianthus-hybrid", 
+    "variety": "Fruit Punch 'Cherry Vanilla'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Red", 
+      "flower_shade": "Velvety Red", 
+      "foliage_colors": [
+        "blue", 
+        "green"
+      ], 
+      "foliage_shade": "Silvery blue", 
+      "garden_height": "8 - 10 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "spacing": "12 - 14 Inches", 
+      "spread": "12 - 14 Inches"
+    }, 
+    "common_name": "Pinks", 
+    "features": {}, 
+    "genus": "dianthus", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Alkaline Soil"
+      ], 
+      "uses": [
+        "container", 
+        "landscape"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/dianthus/fruit-punch-black-cherry-frost-pinks-dianthus-hybrid", 
+    "variety": "Fruit Punch 'Black Cherry Frost'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Pink", 
+      "flower_shade": "Magenta", 
+      "foliage_colors": [
+        "blue"
+      ], 
+      "foliage_shade": "Glaucous blue", 
+      "garden_height": "6 - 8 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "spacing": "12 - 14 Inches", 
+      "spread": "12 - 14 Inches"
+    }, 
+    "common_name": "Pinks", 
+    "features": {}, 
+    "genus": "dianthus", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "uses": [
+        "container", 
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/dianthus/paint-town-magenta-pinks-dianthus-hybrid", 
+    "variety": "'Paint the Town Magenta'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Pink", 
+      "flower_shade": "Light pink", 
+      "foliage_colors": [
+        "red"
+      ], 
+      "foliage_shade": "Bright red", 
+      "garden_height": "8 - 10 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "scape_height": "18 - 22 Inches", 
+      "spacing": "26 - 30 Inches", 
+      "spread": "26 - 30 Inches"
+    }, 
+    "common_name": "Coral Bells", 
+    "features": {}, 
+    "genus": "heuchera", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer", 
+        "Mid Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Shade", 
+        "Shade"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil", 
+        "Fertile Soil"
+      ], 
+      "soil_ph_category": [
+        "Acidic Soil"
+      ], 
+      "uses": [
+        "border", 
+        "plant", 
+        "container", 
+        "cut", 
+        "flower", 
+        "landscape"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/heuchera/dolce-cherry-truffles-coral-bells-heuchera-hybrid", 
+    "variety": "Dolce Cherry Truffles"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Pink                          White", 
+      "flower_shade": "Hot pink buds open to pale pink and white flowers", 
+      "foliage_colors": [
+        "purple"
+      ], 
+      "foliage_shade": "Dramatic purplish black leaves with wine red undersides", 
+      "garden_height": "8 - 10 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "scape_height": "18 - 24 Inches", 
+      "spacing": "18 - 24 Inches", 
+      "spread": "18 - 24 Inches"
+    }, 
+    "common_name": "Coral Bells", 
+    "features": {}, 
+    "genus": "heuchera", 
+    "needs": {
+      "bloom_time": [
+        "Grown for Foliage", 
+        "Mid Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Sun or Shade"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil", 
+        "Fertile Soil"
+      ], 
+      "soil_ph_category": [
+        "Acidic Soil", 
+        "Neutral Soil"
+      ], 
+      "uses": [
+        "border", 
+        "plant", 
+        "container", 
+        "cut", 
+        "flower", 
+        "landscape"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/heuchera/dolce-brazen-raisin-coral-bells-heuchera-hybrid", 
+    "variety": "Dolce Brazen Raisin"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Yellow", 
+      "flower_shade": "Yellow", 
+      "foliage_colors": [
+        "purple"
+      ], 
+      "foliage_shade": "Purple", 
+      "garden_height": "8 - 12 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "scape_height": "20 - 26 Inches", 
+      "spacing": "8 - 12 Inches", 
+      "spread": "12 - 16 Inches"
+    }, 
+    "common_name": "Coral Bells", 
+    "features": {}, 
+    "genus": "heuchera", 
+    "needs": {
+      "bloom_time": [
+        "Grown for Foliage"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Sun or Shade"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "uses": [
+        "container", 
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/heuchera/dolce-blackberry-ice-coral-bells-heuchera-hybrid", 
+    "variety": "Dolce 'Blackberry Ice'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Pink", 
+      "flower_shade": "Rosy pink", 
+      "foliage_colors": [
+        "green", 
+        "yellow"
+      ], 
+      "foliage_shade": "Lime green with silver overlay", 
+      "garden_height": "8 - 10 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "scape_height": "18 - 22 Inches", 
+      "spacing": "18 - 20 Inches", 
+      "spread": "20 - 24 Inches"
+    }, 
+    "common_name": "Coral Bells", 
+    "features": {}, 
+    "genus": "heuchera", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer", 
+        "Mid Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Shade", 
+        "Shade"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil", 
+        "Fertile Soil"
+      ], 
+      "soil_ph_category": [
+        "Acidic Soil"
+      ], 
+      "uses": [
+        "border", 
+        "plant", 
+        "container", 
+        "cut", 
+        "flower", 
+        "landscape"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/heuchera/dolce-appletini-coral-bells-heuchera-hybrid", 
+    "variety": "Dolce 'Appletini'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "White", 
+      "flower_shade": "Cream", 
+      "foliage_colors": [
+        "yellow"
+      ], 
+      "foliage_shade": "Chartreuse yellow", 
+      "garden_height": "10 - 12 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "scape_height": "18 - 20 Inches", 
+      "spacing": "20 - 24 Inches", 
+      "spread": "20 - 24 Inches"
+    }, 
+    "common_name": "Coral Bells", 
+    "features": {}, 
+    "genus": "heuchera", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer", 
+        "Mid Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Shade", 
+        "Shade"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil", 
+        "Fertile Soil"
+      ], 
+      "soil_ph_category": [
+        "Acidic Soil"
+      ], 
+      "uses": [
+        "border", 
+        "plant", 
+        "container", 
+        "cut", 
+        "flower", 
+        "landscape"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/heuchera/dolce-apple-twist-coral-bells-heuchera-hybrid", 
+    "variety": "Dolce Apple Twist"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Yellow", 
+      "flower_shade": "Light golden yellow", 
+      "foliage_colors": [
+        "green"
+      ], 
+      "foliage_shade": "Green", 
+      "garden_height": "30 - 32 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Medium", 
+      "spacing": "18 - 24 Inches", 
+      "spread": "18 - 24 Inches"
+    }, 
+    "common_name": "Daylily", 
+    "features": {}, 
+    "genus": "hemerocallis", 
+    "needs": {
+      "bloom_time": [
+        "Mid Summer"
+      ], 
+      "hardiness_zones": [
+        "3a", 
+        "3b", 
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Neutral Soil"
+      ], 
+      "uses": [
+        "landscape"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/hemerocallis/rainbow-rhythm-tiger-swirl-daylily-hemerocallis-hybrid", 
+    "variety": "Rainbow Rhythm Tiger Swirl"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Purple", 
+      "flower_shade": "Mauve purple", 
+      "foliage_colors": [
+        "green"
+      ], 
+      "foliage_shade": "Green", 
+      "garden_height": "20 - 24 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Medium", 
+      "spacing": "18 - 24 Inches", 
+      "spread": "18 - 24 Inches"
+    }, 
+    "common_name": "Daylily", 
+    "features": {}, 
+    "genus": "hemerocallis", 
+    "needs": {
+      "bloom_time": [
+        "Mid Summer"
+      ], 
+      "hardiness_zones": [
+        "3a", 
+        "3b", 
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Neutral Soil"
+      ], 
+      "uses": [
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/hemerocallis/rainbow-rhythm-storm-shelter-daylily-hemerocallis-hybrid", 
+    "variety": "Rainbow Rhythm 'Storm Shelter'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Pink", 
+      "flower_shade": "Salmon/Coral", 
+      "foliage_colors": [
+        "green"
+      ], 
+      "foliage_shade": "Green", 
+      "garden_height": "18 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Medium", 
+      "spacing": "18 - 24 Inches", 
+      "spread": "18 - 24 Inches"
+    }, 
+    "common_name": "Daylily", 
+    "features": {}, 
+    "genus": "hemerocallis", 
+    "needs": {
+      "bloom_time": [
+        "Mid Summer"
+      ], 
+      "hardiness_zones": [
+        "3a", 
+        "3b", 
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Neutral Soil"
+      ], 
+      "uses": [
+        "landscape"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/hemerocallis/rainbow-rhythm-siloam-peony-display-daylily-hemerocallis-hybrid", 
+    "variety": "Rainbow Rhythm 'Siloam Peony Display'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Red", 
+      "flower_shade": "Red", 
+      "foliage_colors": [
+        "green"
+      ], 
+      "foliage_shade": "Green", 
+      "garden_height": "34 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Tall", 
+      "spacing": "18 - 24 Inches", 
+      "spread": "18 - 24 Inches"
+    }, 
+    "common_name": "Daylily", 
+    "features": {}, 
+    "genus": "hemerocallis", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer"
+      ], 
+      "hardiness_zones": [
+        "3a", 
+        "3b", 
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Neutral Soil"
+      ], 
+      "uses": [
+        "landscape"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/hemerocallis/rainbow-rhythm-ruby-spider-daylily-hemerocallis-hybrid", 
+    "variety": "Rainbow Rhythm Ruby Spider"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Orange", 
+      "flower_shade": "Orange", 
+      "foliage_colors": [
+        "green"
+      ], 
+      "foliage_shade": "Green", 
+      "garden_height": "34 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Tall", 
+      "spacing": "18 - 24 Inches", 
+      "spread": "18 - 24 Inches"
+    }, 
+    "common_name": "Daylily", 
+    "features": {}, 
+    "genus": "hemerocallis", 
+    "needs": {
+      "bloom_time": [
+        "Late Summer"
+      ], 
+      "hardiness_zones": [
+        "3a", 
+        "3b", 
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Neutral Soil"
+      ], 
+      "uses": [
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/hemerocallis/rainbow-rhythm-primal-scream-daylily-hemerocallis-hybrid", 
+    "variety": "Rainbow Rhythm Primal Scream"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Orange", 
+      "flower_shade": "Orange mango", 
+      "foliage_colors": [
+        "green"
+      ], 
+      "foliage_shade": "Green", 
+      "garden_height": "20 - 24 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Medium", 
+      "spacing": "18 - 24 Inches", 
+      "spread": "18 - 24 Inches"
+    }, 
+    "common_name": "Daylily", 
+    "features": {}, 
+    "genus": "hemerocallis", 
+    "needs": {
+      "bloom_time": [
+        "Mid Summer"
+      ], 
+      "hardiness_zones": [
+        "3a", 
+        "3b", 
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Neutral Soil"
+      ], 
+      "uses": [
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/hemerocallis/rainbow-rhythm-orange-smoothie-daylily-hemerocallis-hybrid", 
+    "variety": "Rainbow Rhythm 'Orange Smoothie'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Yellow", 
+      "flower_shade": "Yellow", 
+      "foliage_colors": [
+        "green"
+      ], 
+      "foliage_shade": "Green", 
+      "garden_height": "19 - 22 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Medium", 
+      "spacing": "18 - 24 Inches", 
+      "spread": "18 - 24 Inches"
+    }, 
+    "common_name": "Daylily", 
+    "features": {}, 
+    "genus": "hemerocallis", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer", 
+        "Mid Summer", 
+        "Late Summer"
+      ], 
+      "hardiness_zones": [
+        "3a", 
+        "3b", 
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Neutral Soil"
+      ], 
+      "uses": [
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/hemerocallis/rainbow-rhythm-going-bananas-daylily-hemerocallis-hybrid", 
+    "variety": "Rainbow Rhythm 'Going Bananas'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Thriller", 
+      "duration": "Perennial", 
+      "flower_colors": "Yellow", 
+      "flower_shade": "Golden yellow", 
+      "foliage_colors": [
+        "green"
+      ], 
+      "foliage_shade": "Green", 
+      "garden_height": "20 - 24 Inches", 
+      "habit": "Upright", 
+      "height_category": "Medium", 
+      "spacing": "20 - 24 Inches", 
+      "spread": "20 - 24 Inches"
+    }, 
+    "common_name": "Perennial Sunflower", 
+    "features": {}, 
+    "genus": "heliopsis", 
+    "needs": {
+      "bloom_time": [
+        "Mid Summer", 
+        "Late Summer", 
+        "Early Fall"
+      ], 
+      "hardiness_zones": [
+        "3a", 
+        "3b", 
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "soil_ph_category": [
+        "Neutral Soil"
+      ], 
+      "uses": [
+        "container", 
+        "cut", 
+        "flower", 
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "helianthoides", 
+    "url": "https://www.provenwinners.com/plants/heliopsis/tuscan-sun-perennial-sunflower-heliopsis-helianthoides", 
+    "variety": "'Tuscan Sun'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Thriller", 
+      "duration": "Perennial", 
+      "flower_colors": "Yellow", 
+      "flower_shade": "Sunny yellow", 
+      "foliage_colors": [
+        "green"
+      ], 
+      "foliage_shade": "Dark green", 
+      "garden_height": "24 - 32 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Medium", 
+      "spacing": "20 - 24 Inches", 
+      "spread": "20 - 24 Inches"
+    }, 
+    "common_name": "False Sunflower", 
+    "features": {}, 
+    "genus": "heliopsis", 
+    "needs": {
+      "bloom_time": [
+        "Mid Summer", 
+        "Late Summer", 
+        "Early Fall"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Sun", 
+        "Sun"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "uses": [
+        "container", 
+        "cut", 
+        "flower"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "helianthoides", 
+    "url": "https://www.provenwinners.com/plants/heliopsis/tuscan-gold-false-sunflower-heliopsis-helianthoides", 
+    "variety": "Tuscan Gold"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Pink", 
+      "flower_shade": "Vibrant pink", 
+      "foliage_colors": [
+        "silver"
+      ], 
+      "foliage_shade": "Silver", 
+      "garden_height": "6 - 8 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "scape_height": "20 - 24 Inches", 
+      "spacing": "20 - 24 Inches", 
+      "spread": "20 - 24 Inches"
+    }, 
+    "common_name": "Coral Bells", 
+    "features": {}, 
+    "genus": "heuchera", 
+    "needs": {
+      "bloom_time": [
+        "Early Summer", 
+        "Mid Summer"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Part Shade", 
+        "Shade"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil", 
+        "Fertile Soil"
+      ], 
+      "soil_ph_category": [
+        "Acidic Soil"
+      ], 
+      "uses": [
+        "border", 
+        "plant", 
+        "container", 
+        "cut", 
+        "flower", 
+        "landscape"
+      ], 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/heuchera/dolce-silver-gumdrop-coral-bells-heuchera-hybrid", 
+    "variety": "Dolce 'Silver Gumdrop'"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "Pink", 
+      "flower_shade": "Pink - flowers are insignificant", 
+      "foliage_colors": [
+        "brown"
+      ], 
+      "foliage_shade": "Bronze", 
+      "garden_height": "8 - 16 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "scape_height": "18 - 24 Inches", 
+      "spacing": "16 - 24 Inches", 
+      "spread": "12 - 16 Inches"
+    }, 
+    "common_name": "Coral Bells", 
+    "features": {}, 
+    "genus": "heuchera", 
+    "needs": {
+      "bloom_time": [
+        "Early Spring", 
+        "Mid Spring", 
+        "Late Spring"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Sun or Shade"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "uses": [
+        "container", 
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/heuchera/dolce-creme-brulee-coral-bells-heuchera-hybrid", 
+    "variety": "Dolce Creme Brulee"
+  }, 
+  {
+    "characteristics": {
+      "container_role": "Filler", 
+      "duration": "Perennial", 
+      "flower_colors": "White", 
+      "flower_shade": "White", 
+      "foliage_colors": [
+        "red"
+      ], 
+      "foliage_shade": "Red", 
+      "garden_height": "8 - 12 Inches", 
+      "habit": "Mounded", 
+      "height_category": "Short", 
+      "scape_height": "16 - 18 Inches", 
+      "spacing": "8 - 12 Inches", 
+      "spread": "12 - 16 Inches"
+    }, 
+    "common_name": "Coral Bells", 
+    "features": {}, 
+    "genus": "heuchera", 
+    "needs": {
+      "bloom_time": [
+        "Grown for Foliage"
+      ], 
+      "hardiness_zones": [
+        "4a", 
+        "4b", 
+        "5a", 
+        "5b", 
+        "6a", 
+        "6b", 
+        "7a", 
+        "7b", 
+        "8a", 
+        "8b", 
+        "9a", 
+        "9b"
+      ], 
+      "light_requirement": [
+        "Sun or Shade"
+      ], 
+      "maintenance_category": "Easy", 
+      "maintenance_notes": "", 
+      "soil_fertility_requirement": [
+        "Average Soil"
+      ], 
+      "uses": [
+        "container", 
+        "landscape"
+      ], 
+      "uses_notes": "", 
+      "water_category": "Average"
+    }, 
+    "species": "hybrid", 
+    "url": "https://www.provenwinners.com/plants/heuchera/dolce-cinnamon-curls-coral-bells-heuchera-hybrid", 
+    "variety": "Dolce Cinnamon Curls"
+  }
+]

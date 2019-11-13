@@ -1,6 +1,5 @@
 import scrapy
 
-
 # This package
 from scrapers.formatters import (
     labelize,
@@ -16,14 +15,14 @@ class SpringHillNursery(scrapy.Spider):
     def start_requests(self):
         """Determine which category starting url to run."""
         cats = [
-            'perennial_plants',
+            'annuals',
+            'edibles',
+            'flower_bulbs',
             'flowering_fast_growing_trees',
+            'perennial_plants',
+            'rose_plants',
             'shrubs_hedges',
             'vines_climbers',
-            'flower_bulbs',
-            'rose_plants',
-            'edibles',
-            'annuals',
         ]
         has_cat = hasattr(self, 'category')
         if has_cat and self.category not in cats:
@@ -49,10 +48,10 @@ class SpringHillNursery(scrapy.Spider):
                     data[k] = tokenize(v)
             return data
 
-        data = {
-            'url': response.url,
-            'category': response.meta['_ours']['category'],
-        }
+        data = dict(
+            url=response.url,
+            category=response.meta['_ours']['category'],
+        )
         data.update(extract_group(response.css('.product_info .info_list_A')))
         data.update(extract_group(response.css('.product_info .info_list_B')))
         yield data
