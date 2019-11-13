@@ -7,8 +7,8 @@ import os
 
 from collections import defaultdict
 
-from plantstuff.core import conf, fetch
-from plantstuff.core.decorators import to_json
+from plantstuff.scraper_utils import conf, fetch
+from plantstuff.scraper_utils.decorators import to_json
 
 MONROVIA_URL = 'http://www.monrovia.com/plant-catalog/plants/{plant_info}'
 

@@ -1,7 +1,7 @@
 import requests
 
-from plantstuff.core import conf, fetch
-from plantstuff.core.decorators import to_json
+from plantstuff.scraper_utils import conf, fetch
+from plantstuff.scraper_utils.decorators import to_json
 
 URL = 'http://www.perennials.com/plants/{plant}.html'
 

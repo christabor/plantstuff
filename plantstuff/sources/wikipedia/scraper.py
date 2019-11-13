@@ -1,6 +1,6 @@
 """Scraper for university of connecticut horticulture page."""
-from plantstuff.core import fetch
-from plantstuff.core.decorators import cached, to_json
+from plantstuff.scraper_utils import fetch
+from plantstuff.scraper_utils.decorators import cached, to_json
 
 
 get_dom = fetch.get_dom(directory='../../data/wikipedia')

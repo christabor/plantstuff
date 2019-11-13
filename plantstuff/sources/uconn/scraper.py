@@ -1,6 +1,6 @@
 """Scraper for university of connecticut horticulture page."""
-from plantstuff.core import fetch
-from plantstuff.core.decorators import to_json
+from plantstuff.scraper_utils import fetch
+from plantstuff.scraper_utils.decorators import to_json
 
 URL = 'http://hort.uconn.edu'
 

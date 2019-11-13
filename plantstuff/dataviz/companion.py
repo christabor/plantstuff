@@ -1,25 +1,18 @@
-"""Graphing data."""
+"""Companion plant visualization tools."""
 import sys
 from collections import Counter
 from pprint import pprint as ppr
 
 import pygraphviz as pgv
 
-from bokeh.plotting import figure, output_file, show
-
 from plantstuff.sources.monrovia.scraper import (
     get_companion_plant_monrovia,
     load_monrovia_data,
 )
 
-# data = load_monrovia_data()
-# names = [d['name'] for d in data]
-# colors = [d['detail'].get('flower_color') for d in data]
-
-# ppr(zip(names, colors))
-
 
 def wordcloud(detail_key='plant_type'):
+    """Return a counter of details for a given key useful for creating word clouds."""
     data = load_monrovia_data()
     return Counter([
         w['detail'][detail_key].lower() for w in data
@@ -28,13 +21,13 @@ def wordcloud(detail_key='plant_type'):
 
 
 def make_companion_plant_graph():
+    """Create a companion plant graph from parsed data."""
     relationships = get_companion_plant_monrovia()
     g = pgv.AGraph()
     seen = []
     for (start, end) in relationships:
         if len(end) > 50:
             continue
-
         if start not in seen:
             g.add_node(start)
             seen.append(start)

@@ -1,8 +1,8 @@
 """Scraper for springhills nursery page."""
 
-from plantstuff.core import fetch
-from plantstuff.core import normalize
-from plantstuff.core.decorators import to_json
+from plantstuff.scraper_utils import fetch
+from plantstuff.scraper_utils import normalize
+from plantstuff.scraper_utils.decorators import to_json
 
 # 'a' is for all, not an alphabetical letter
 URL = 'https://www.springhillnursery.com/category/{section}/a'

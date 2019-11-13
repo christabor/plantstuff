@@ -1,6 +1,6 @@
 """Daves garden scrapers."""
-from plantstuff.core import fetch
-from plantstuff.core.decorators import to_json
+from plantstuff.scraper_utils import fetch
+from plantstuff.scraper_utils.decorators import to_json
 
 LETTERS = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'.split()
 DAVES_URL = 'http://davesgarden.com/guides/pf/go/{plant_id}/'
