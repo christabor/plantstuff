@@ -2,7 +2,7 @@ import json
 
 from neomodel import config
 
-from plantstuff.schema_graph import (
+from plantstuff.schema_graph.models import (
     flower,
     plant,
     soil,

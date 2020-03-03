@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        {% for schemas in all_schemas %}
+            {% for name, class in schemas %}
+                {% for k, v in class.__dict__.items() %}
+                    {% if not k.startswith('_') and k != 'DoesNotExist' %}
+                        <label>
+                            {{ name }} - {{ k }}: {{ v }}
+                            <input type="text" name="{{ k }}">
+                        </label>
+                        <br>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+{#     <div class="col-md-3">
+        <h3>Search for plants</h3>
+        <form action=".">
+            {% for field in form %}
+                {{ field }}
+            {% endfor %}
+        </form>
+    </div>
+    <div class="col-md-9">
+        <h3>Results</h3>
+        {% for res in results %}
+            {{ res }}
+        {% endfor %}
+    </div>
+ #}</div>
+{% endblock %}

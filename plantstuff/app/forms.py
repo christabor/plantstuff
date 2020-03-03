@@ -2,22 +2,12 @@
 
 from flask import request, session
 from flask_wtf import FlaskForm
-from wtforms import (
-    BooleanField,
-    RadioField,
-    HiddenField,
-    IntegerField,
-    PasswordField,
-    SelectField,
-    FormField,
-    SelectMultipleField,
-    StringField,
-    SubmitField,
-    TextAreaField,
-    validators,
-)
+from wtforms import (BooleanField, FormField, HiddenField, IntegerField,
+                     PasswordField, RadioField, SelectField,
+                     SelectMultipleField, StringField, SubmitField,
+                     TextAreaField, validators)
 
-from schematics.models import FieldDescriptor
+# from schematics.models import FieldDescriptor
 
 
 def make_form(model):
@@ -30,7 +20,7 @@ def make_form(model):
         print(v)
         # if isinstance(v, FieldDescriptor):
         #     print(dir(v))
-            # print(v._type)
+        # print(v._type)
 
     setattr(CustomForm, 'submit', SubmitField('Search'))
     return CustomForm

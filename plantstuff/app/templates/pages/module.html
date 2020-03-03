@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li class="active">{{ name }}</li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3>models for <strong>{{ name }}</strong></h3>
+        <hr>
+        {% for class_name, class in classes %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><em>{{ name }}</em>.{{ class_name}}</h3>
+                    <br><small><pre>{{ class.__doc__ }}</pre></small>
+                </div>
+                <div class="panel-body">
+                    <p><strong>Properties</strong></p>
+                    {% for k, v in class.__dict__.items() %}
+                        {% if not k.startswith('__') and k != 'DoesNotExist' %}
+                            {{ k }}: {{ v }}
+                            <br>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
