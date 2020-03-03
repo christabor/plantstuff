@@ -1,9 +1,7 @@
 """Plant environmental tolerances."""
-from neomodel import (
-    StructuredNode as Model,
-    FloatProperty as FloatProp,
-    StringProperty as StringProp,
-)
+from neomodel import FloatProperty as FloatProp
+from neomodel import StringProperty as StringProp
+from neomodel import StructuredNode as Model
 
 SOIL_PH_TOLERANCE_MAX_RANGE = [
     "3.5-3.6",
@@ -139,8 +137,8 @@ SOIL_PH_TOLERANCE_MIN_RANGE = [
 class NumericalRangeTolerance(Model):
     """A plant tolerance type.
 
-    This in particulary denotes tolerances that
-    adhere to nuermical values that are
+    This in particular denotes tolerances that
+    adhere to numerical values that are
     dictated by a range with upper and lower bounds.
 
     Examples that fit this category:

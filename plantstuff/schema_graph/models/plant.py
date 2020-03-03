@@ -39,7 +39,7 @@ from neomodel import (
 )
 
 from plantstuff.schema_graph import validators
-from plantstuff.schema_graph import (
+from plantstuff.schema_graph.models import (
     lifespan,
     reproduction,
     taxonomy,
