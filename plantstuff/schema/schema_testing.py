@@ -2,8 +2,7 @@
 
 Could be used for documentation at a later point.
 """
-import ppr
-
+# import ppr
 # Testing
 # Testing data ideas using raw json,
 # for marshmallow schema
@@ -45,29 +44,29 @@ data_example = {
     ]
 }
 
-plant_schema = Plant(
-    name=data_example['name'],
-    tags=data_example['tags'],
-    cultivars=[
-        taxonomy.Cultivar(**d) for d in data_example['cultivars']
-    ],
-)
-ppr([d.traits() for d in plant_schema.cultivars])
+# plant_schema = Plant(
+#     name=data_example['name'],
+#     tags=data_example['tags'],
+#     cultivars=[
+#         taxonomy.Cultivar(**d) for d in data_example['cultivars']
+#     ],
+# )
+# ppr([d.traits() for d in plant_schema.cultivars])
 
 
-res = plant_schema.load(data_example)
-ppr(res.data)
-ppr(res.errors)
+# res = plant_schema.load(data_example)
+# ppr(res.data)
+# ppr(res.errors)
 
 
-forsythia = Plant()
-res = forsythia.load(dict(
-    name='forsythia',
-    base_growth_form=['rounded'],
-    growth_habit=['shrub'],
-    hierarchy=dict(
-        kingdom=['plantae'],
-    )
-))
-ppr(res.data)
-ppr(res.errors)
+# forsythia = Plant()
+# res = forsythia.load(dict(
+#     name='forsythia',
+#     base_growth_form=['rounded'],
+#     growth_habit=['shrub'],
+#     hierarchy=dict(
+#         kingdom=['plantae'],
+#     )
+# ))
+# ppr(res.data)
+# ppr(res.errors)
